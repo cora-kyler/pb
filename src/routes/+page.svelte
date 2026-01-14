@@ -19,8 +19,29 @@
 			<img src="/pebbles1.png" alt="Pebblebed illustration" class="w-full h-auto" />
 		</div>
 	</section>
+</div>
 
-	<hr class="border-t border-dark-grey/20 my-8 md:my-12" />
+<style>
+	.container {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 40px 24px;
+	}
+
+	.hero {
+		display: flex;
+		align-items: center;
+		gap: 48px;
+		padding-bottom: 48px;
+		border-bottom: 1px solid var(--light-grey);
+	}
+
+	.hero-text {
+		font-size: 15px;
+		line-height: 1.8;
+		color: var(--dark-grey);
+		max-width: 720px;
+	}
 
 	<section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
 		<div class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-md overflow-hidden">
