@@ -1,11 +1,14 @@
 <script lang="ts">
 	import Header from '$lib/components/Header.svelte';
+	import TeamCard from '$lib/components/TeamCard.svelte';
+	import PreviewWritingCard from '$lib/components/PreviewWritingCard.svelte';
 </script>
 
 <svelte:head>
 	<title>Pebblebed Ventures</title>
 </svelte:head>
 
+<div id="home"></div>
 <Header />
 
 <div class="mx-auto max-w-[900px] px-6 py-10">
@@ -18,11 +21,11 @@
 		<div class="w-full md:w-[280px] shrink-0">
 			<div class="flex items-center gap-4 md:block">
 				<img src="/pebbles1.png" alt="Pebblebed illustration" class="w-[45%] md:w-full h-auto shrink-0" />
-				<p class="text-[10px] text-dark-grey/50 leading-relaxed md:hidden">A pebblebed reactor can't melt down — safety emerges from physics, not intervention. We named our firm after this principle.</p>
+				<p class="text-[10px] text-dark-grey/50 leading-relaxed md:hidden">A pebblebed reactor can't melt down. This is a guaranteed made by physics, not intervention. We named our firm after this principle.</p>
 			</div>
 			<div class="hidden md:flex items-start gap-2 mt-3">
 				<img src="/arrow.svg" alt="" class="w-auto h-12 shrink-0 -mt-12 rotate-15" />
-				<p class="text-[10px] text-dark-grey/50 leading-relaxed">A pebblebed reactor can't melt down — safety emerges from physics, not intervention. We named our firm after this principle.</p>
+				<p class="text-[10px] text-dark-grey/50 leading-relaxed">A pebblebed reactor can't melt down.<br />This is a guaranteed made by physics, not intervention. We named our firm after this principle.</p>
 			</div>
 		</div>
 	</section>
@@ -60,60 +63,60 @@
 
 	<hr class="border-t border-dark-grey/20 my-8 md:my-12" />
 
-	<section>
+	<section id="team" class="scroll-mt-20">
 		<div class="flex justify-between items-baseline mb-8">
 			<h2 class="font-sans text-2xl font-semibold text-dark-grey">Team</h2>
-			<a href="/careers" class="font-mono text-xs text-pink hover:underline transition-colors">Interested in joining the team?</a>
+			<a href="/hiring" class="font-mono text-xs text-pink hover:underline transition-colors">Join our team →</a>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-			<a href="/team/pam" class="flex gap-5 items-start p-4 -m-4 rounded-lg cursor-pointer transition-all duration-200 hover:duration-0 hover:bg-dark-grey/5 group">
-				<div class="flex-1">
-					<h3 class="font-sans font-semibold text-dark-grey group-hover:text-dark-grey/80">Pamela Vagata</h3>
-					<span class="font-mono text-xs text-dark-grey/60 block mb-2">Founding Partner</span>
-					<p class="text-xs text-dark-grey/80 leading-relaxed">Creator of FBLearner Flow, founding member of OpenAI, led AI at Stripe.</p>
-				</div>
-				<img src="/teamimages/pam.png" alt="Pam" class="w-32 aspect-square object-cover bg-white border border-dark-grey/15 shadow-invert shrink-0 rounded-sm transition-transform group-hover:scale-[1.02]" />
-			</a>
-			<a href="/team/keith" class="flex gap-5 items-start p-4 -m-4 rounded-lg cursor-pointer transition-all duration-200 hover:duration-0 hover:bg-dark-grey/5 group">
-				<div class="flex-1">
-					<h3 class="font-sans font-semibold text-dark-grey group-hover:text-dark-grey/80">Keith Adams</h3>
-					<span class="font-mono text-xs text-dark-grey/60 block mb-2">Founding Partner</span>
-					<p class="text-xs text-dark-grey/80 leading-relaxed">Founded Facebook AI Research, Chief Architect at Slack.</p>
-				</div>
-				<img src="/teamimages/keith.png" alt="Keith" class="w-32 aspect-square object-cover bg-white border border-dark-grey/15 shadow-invert shrink-0 rounded-sm transition-transform group-hover:scale-[1.02]" />
-			</a>
-			<a href="/team/tammie" class="flex gap-5 items-start p-4 -m-4 rounded-lg cursor-pointer transition-all duration-200 hover:duration-0 hover:bg-dark-grey/5 group">
-				<div class="flex-1">
-					<h3 class="font-sans font-semibold text-dark-grey group-hover:text-dark-grey/80">Tammie Siew</h3>
-					<span class="font-mono text-xs text-dark-grey/60 block mb-2">Founding Partner</span>
-					<p class="text-xs text-dark-grey/80 leading-relaxed">Founder-turned-investor, formerly at Sequoia.</p>
-				</div>
-				<img src="/teamimages/tammie.png" alt="Tammie" class="w-32 aspect-square object-cover bg-white border border-dark-grey/15 shadow-invert shrink-0 rounded-sm transition-transform group-hover:scale-[1.02]" />
-			</a>
-			<a href="/team/nicole" class="flex gap-5 items-start p-4 -m-4 rounded-lg cursor-pointer transition-all duration-200 hover:duration-0 hover:bg-dark-grey/5 group">
-				<div class="flex-1">
-					<h3 class="font-sans font-semibold text-dark-grey group-hover:text-dark-grey/80">Nicole Levin</h3>
-					<span class="font-mono text-xs text-dark-grey/60 block mb-2">Operations</span>
-					<p class="text-xs text-dark-grey/80 leading-relaxed">Previously ran ops at AI startups.</p>
-				</div>
-				<img src="/teamimages/nicole.png" alt="Nicole" class="w-32 aspect-square object-cover bg-white border border-dark-grey/15 shadow-invert shrink-0 rounded-sm transition-transform group-hover:scale-[1.02]" />
-			</a>
-			<a href="/team/matthew" class="flex gap-5 items-start p-4 -m-4 rounded-lg cursor-pointer transition-all duration-200 hover:duration-0 hover:bg-dark-grey/5 group">
-				<div class="flex-1">
-					<h3 class="font-sans font-semibold text-dark-grey group-hover:text-dark-grey/80">Mathew Vanherreweghe</h3>
-					<span class="font-mono text-xs text-dark-grey/60 block mb-2">Research Resident</span>
-					<p class="text-xs text-dark-grey/80 leading-relaxed">AI Researcher studying alternatives to transformers.</p>
-				</div>
-				<img src="/teamimages/matthew.png" alt="Matthew" class="w-32 aspect-square object-cover bg-white border border-dark-grey/15 shadow-invert shrink-0 rounded-sm transition-transform group-hover:scale-[1.02]" />
-			</a>
-			<a href="/team/jenny" class="flex gap-5 items-start p-4 -m-4 rounded-lg cursor-pointer transition-all duration-200 hover:duration-0 hover:bg-dark-grey/5 group">
-				<div class="flex-1">
-					<h3 class="font-sans font-semibold text-dark-grey group-hover:text-dark-grey/80">Jenny Guanni Qu</h3>
-					<span class="font-mono text-xs text-dark-grey/60 block mb-2">Research Resident</span>
-					<p class="text-xs text-dark-grey/80 leading-relaxed">Trained AI to solve math at Caltech, top competitive hacker.</p>
-				</div>
-				<img src="/teamimages/jenny.png" alt="Jenny" class="w-32 aspect-square object-cover bg-white border border-dark-grey/15 shadow-invert shrink-0 rounded-sm transition-transform group-hover:scale-[1.02]" />
-			</a>
+			<TeamCard
+				href="/team/pam"
+				name="Pamela Vagata"
+				role="Founding Partner"
+				description="Creator of FBLearner Flow, founding member of OpenAI, led AI at Stripe."
+				image="/teamimages/pam.png"
+				imageAlt="Pam"
+			/>
+			<TeamCard
+				href="/team/keith"
+				name="Keith Adams"
+				role="Founding Partner"
+				description="Founded Facebook AI Research, Chief Architect at Slack."
+				image="/teamimages/keith.png"
+				imageAlt="Keith"
+			/>
+			<TeamCard
+				href="/team/tammie"
+				name="Tammie Siew"
+				role="Founding Partner"
+				description="Founder-turned-investor, formerly at Sequoia."
+				image="/teamimages/tammie.png"
+				imageAlt="Tammie"
+			/>
+			<TeamCard
+				href="/team/nicole"
+				name="Nicole Levin"
+				role="Operations"
+				description="Previously ran ops at AI startups."
+				image="/teamimages/nicole.png"
+				imageAlt="Nicole"
+			/>
+			<TeamCard
+				href="/team/matthew"
+				name="Mathew Vanherreweghe"
+				role="Research Alumni"
+				description="AI Researcher studying alternatives to transformers. Now at a portfolio company."
+				image="/teamimages/matthew.png"
+				imageAlt="Matthew"
+			/>
+			<TeamCard
+				href="/team/jenny"
+				name="Jenny Guanni Qu"
+				role="Research Resident"
+				description="Trained AI to solve math at Caltech, top competitive hacker."
+				image="/teamimages/jenny.png"
+				imageAlt="Jenny"
+			/>
 		</div>
 	</section>
 
@@ -125,48 +128,37 @@
 			<a href="/writing" class="font-mono text-xs text-pink hover:underline transition-colors">View more →</a>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			<a href="/blog/kernel-bugs" class="block p-5 bg-white border border-dark-grey/15 rounded-lg transition-shadow hover:shadow-subtle-glow-strong group relative overflow-visible">
-				<div class="absolute -top-3 -right-3">
-					<div class="relative">
-						<img src="/newwritingzigzag.svg" alt="" class="w-20 h-14" />
-						<span class="absolute inset-0 flex items-center justify-center font-mono text-xs text-pink">NEW</span>
-					</div>
-				</div>
-				<div class="flex items-center gap-2 mb-2">
-					<span class="font-mono text-[10px] text-dark-grey">// blog</span>
-					<span class="font-mono text-[10px] text-dark-grey">·</span>
-					<span class="font-mono text-[10px] text-dark-grey/50">Jan 2026</span>
-				</div>
-				<h3 class="font-sans font-semibold text-dark-grey mb-2 group-hover:text-dark-grey/80">Kernel bugs hide for 2 years on average</h3>
-				<p class="text-xs text-dark-grey/70 leading-relaxed">What I learned mining 125,000 vulnerabilities from Linux git history.</p>
-			</a>
-			<a href="/blog/krea" class="block p-5 bg-white border border-dark-grey/15 rounded-lg transition-shadow hover:shadow-subtle-glow-strong group">
-				<div class="flex items-center gap-2 mb-2">
-					<span class="font-mono text-[10px] text-dark-grey">// blog</span>
-					<span class="font-mono text-[10px] text-dark-grey">·</span>
-					<span class="font-mono text-[10px] text-dark-grey/50">Apr 2025</span>
-				</div>
-				<h3 class="font-sans font-semibold text-dark-grey mb-2 group-hover:text-dark-grey/80">KREA</h3>
-				<p class="text-xs text-dark-grey/70 leading-relaxed">From a park bench handshake in 2022 to millions of users creating at the speed of imagination.</p>
-			</a>
-			<a href="https://github.com/Mathewvanh/KANGPT" target="_blank" rel="noopener noreferrer" class="block p-5 bg-white border border-dark-grey/15 rounded-lg transition-shadow hover:shadow-subtle-glow-strong group">
-				<div class="flex items-center gap-2 mb-2">
-					<span class="font-mono text-[10px] text-dark-grey">// research</span>
-					<span class="font-mono text-[10px] text-dark-grey">·</span>
-					<span class="font-mono text-[10px] text-dark-grey/50">Jan 2025</span>
-				</div>
-				<h3 class="font-sans font-semibold text-dark-grey mb-2 group-hover:text-dark-grey/80">KANGPT</h3>
-				<p class="text-xs text-dark-grey/70 leading-relaxed">A transformer-based language model replacing MLP layers with Kolmogorov-Arnold Networks.</p>
-			</a>
-			<a href="https://arxiv.org/abs/2511.21626" target="_blank" rel="noopener noreferrer" class="block p-5 bg-white border border-dark-grey/15 rounded-lg transition-shadow hover:shadow-subtle-glow-strong group">
-				<div class="flex items-center gap-2 mb-2">
-					<span class="font-mono text-[10px] text-dark-grey">// research</span>
-					<span class="font-mono text-[10px] text-dark-grey">·</span>
-					<span class="font-mono text-[10px] text-dark-grey/50">Nov 2025</span>
-				</div>
-				<h3 class="font-sans font-semibold text-dark-grey mb-2 group-hover:text-dark-grey/80">Scale-Agnostic Kolmogorov-Arnold Geometry</h3>
-				<p class="text-xs text-dark-grey/70 leading-relaxed">Research extending geometric structures in neural networks to high-dimensional settings.</p>
-			</a>
+			<PreviewWritingCard
+				href="/blog/kernel-bugs"
+				type="blog"
+				date="Jan 2026"
+				title="Kernel bugs hide for 2 years on average"
+				description="What I learned mining 125,000 vulnerabilities from Linux git history."
+				isNew
+			/>
+			<PreviewWritingCard
+				href="/blog/krea"
+				type="blog"
+				date="Apr 2025"
+				title="KREA"
+				description="From a park bench handshake in 2022 to millions of users creating at the speed of imagination."
+			/>
+			<PreviewWritingCard
+				href="https://github.com/Mathewvanh/KANGPT"
+				type="research"
+				date="Dec 2025"
+				title="KANGPT"
+				description="A transformer-based language model replacing MLP layers with Kolmogorov-Arnold Networks."
+				external
+			/>
+			<PreviewWritingCard
+				href="https://arxiv.org/abs/2511.21626"
+				type="research"
+				date="Nov 2025"
+				title="Scale-Agnostic Kolmogorov-Arnold Geometry"
+				description="Research extending geometric structures in neural networks to high-dimensional settings."
+				external
+			/>
 		</div>
 	</section>
 </div>
