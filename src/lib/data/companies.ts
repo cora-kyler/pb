@@ -21,7 +21,7 @@ export interface Company {
 	news?: NewsItem[];
 }
 
-// Ordered by stage: Acquired → Late Stage → Series B → Series A → Seed → Pre-Seed → Stealth
+// Ordered by stage / vibe.. obviously change the order here as you please :)
 const companyOrder = [
 	
     'augment',
@@ -63,29 +63,29 @@ export const companies: Record<string, Company> = {
 		name: 'Select Star',
 		tagline: 'Automated data catalog for AI',
 		logo: '',
-		description: 'Select Star operates as a modern data governance platform specializing in automated data catalog and discovery solutions. The platform integrates directly with data warehouses and BI tools to extract metadata, query history, and activity logs. It delivers features including Google-like search functionality, data dictionaries, business glossaries, popularity metrics, lineage tracking, and entity relationship mapping—consolidated in a single interface.',
+		description: 'Select Star is a modern data governance platform that provides an automated data catalog and discovery solution for making data AI-ready. The platform automatically catalogs and documents database tables and BI dashboards, connects to data warehouses and BI tools to gather metadata and activity logs, and offers features such as Google-like search, data dictionaries, business glossaries, popularity metrics, lineage tracking, and entity relationships in a unified interface.',
 		website: 'https://selectstar.com',
-		founders: [{ name: 'Shinji Kim' }]
+		founders: [{ name: 'Shinji Kim', link: 'https://www.linkedin.com/in/shinjikim/' }]
 	},
 	'elliptic-ai': {
 		slug: 'elliptic-ai',
 		name: 'Elliptic',
 		tagline: 'AI Tools to amplify data scientists',
 		logo: '',
-		description: 'Elliptic transforms how organizations harness specialized expertise by leveraging artificial intelligence. The company develops AI-powered tools enabling businesses to better utilize their domain knowledge and technical capabilities.',
+		description: 'Elliptic is revolutionizing how businesses amplify domain expertise through AI. The company is building AI tools that enable businesses to leverage their specialized knowledge more effectively.\n\nFunded by FirstRound, Pebblebed, Afore, Stripe, Slack and others.',
 		website: 'https://elliptic.ai',
-		founders: [{ name: 'Christian Griset' }]
+		founders: [{ name: 'Christian Griset', link: 'https://www.linkedin.com/in/christian-griset-6b662749/' }]
 	},
 	'augment': {
 		slug: 'augment',
 		name: 'Augment',
 		tagline: 'Enterprise AI coding assistant',
 		logo: '/portfolioimages/augment.svg',
-		description: 'Augment develops an enterprise-focused AI coding assistant tailored for large software teams managing extensive codebases. The platform emphasizes on-premise deployment options, enabling organizations to maintain code within their own infrastructure for security and compliance purposes.\n\nFounded in 2022, the platform has demonstrated >40% increase in developer productivity for enterprise customers.\n\nRaised $252M at $977M valuation. Selected Claude on Google Cloud\'s Vertex AI for their platform after extensive model testing.',
+		description: 'AugmentCode (Augment) is building an enterprise AI coding assistant designed for large software teams working on millions of lines of code. The company focuses on on-premise deployments for organizations that require code to stay within their infrastructure.\n\nFounded in 2022, the platform has demonstrated >40% increase in developer productivity for enterprise customers.\n\nRaised $252M at $977M valuation. Selected Claude on Google Cloud\'s Vertex AI for their platform after extensive model testing.',
 		website: 'https://augmentcode.com',
 		founders: [
-			{ name: 'Igor Ostrovsky', link: 'https://linkedin.com/in/igorostrovsky' },
-			{ name: 'Guy Gur-Ari', link: 'https://linkedin.com/in/guygurari' }
+			{ name: 'Igor Ostrovsky', link: 'https://www.linkedin.com/in/igoro/' },
+			{ name: 'Guy Gur-Ari', link: 'https://www.linkedin.com/in/guy-gur-ari/' }
 		]
 	},
 	'krea': {
@@ -93,11 +93,11 @@ export const companies: Record<string, Company> = {
 		name: 'KREA',
 		tagline: 'Adobe for the AI era',
 		logo: '/portfolioimages/krea.svg',
-		description: 'KREA is a unified AI platform designed for creative professionals. The company integrates tools from multiple AI models through a custom interface that streamlines queries and enables easier, more customizable edits.\n\nFounded March 2022 in San Francisco with an 8-person team. Over 50 major product updates launched within 14 months, organic user growth exceeding 20 million, and 20-fold revenue increase.\n\nRaised $83M at $500M valuation. Users include creators at Perplexity AI, Pixar, LEGO, and Samsung.',
+		description: 'KREA provides a unified AI platform for creatives, integrating tooling from multiple AI models with a custom interface that makes queries and subsequent edits significantly easier and more customizable. Founded in March 2022, the company aims to be "Adobe for the AI era."\n\nIn the last 14 months, KREA rolled out over 50 major product updates, grew to over 20 million users organically, and 20x\'d their revenue—all with a team of 8 working from San Francisco.',
 		website: 'https://krea.ai',
 		founders: [
-			{ name: 'Victor Perez', link: 'https://twitter.com/victorperez' },
-			{ name: 'Diego Rodriguez', link: 'https://twitter.com/diegorodriguez' }
+			{ name: 'Victor Perez', link: 'https://www.linkedin.com/in/iamvictorperez/' },
+			{ name: 'Diego Rodriguez', link: 'https://www.linkedin.com/in/asciidiego/' }
 		],
 		news: [
 			{
@@ -113,13 +113,13 @@ export const companies: Record<string, Company> = {
 		name: 'Ona',
 		tagline: 'Mission control for software agents',
 		logo: '',
-		description: 'Ona, rebranded from Gitpod in September 2025, represents an evolution from cloud development environments to an AI-powered software development platform. The company enables developers to collaborate with autonomous software engineering agents throughout the complete software development lifecycle.\n\nAgents co-author 60% of merged pull requests and contribute 72% of lines of code within their own operations.\n\nOriginally established in July 2017 as Gitpod, the platform achieved substantial adoption, reaching 2 million developers.',
+		description: 'Ona (formerly Gitpod) is mission control for software projects and software engineering agents. Originally founded in July 2017 as Gitpod, the company rebranded to Ona in September 2025 to reflect its evolution from cloud development environments to an AI-powered platform for software development.\n\nOna provides an AI agent platform where developers work alongside autonomous software engineering agents across the entire software development lifecycle. Within Ona\'s own engineering organization, agents co-author 60% of PRs merged and contribute 72% of lines of code.\n\nThe company grew Gitpod to 2 million developers using cloud development environments with native integrations for GitLab, GitHub, and Bitbucket.',
 		website: 'https://ona.com',
 		founders: [
-			{ name: 'Johannes Landgraf' },
-			{ name: 'Sven Efftinge' },
+			{ name: 'Johannes Landgraf', link: 'https://www.linkedin.com/in/johanneslandgraf' },
+			{ name: 'Sven Efftinge', link: 'https://de.linkedin.com/in/efftinge' },
 			{ name: 'Moritz Eysholdt' },
-			{ name: 'Dr. Jan Koehnlein' }
+			{ name: 'Dr. Jan Koehnlein', link: 'https://de.linkedin.com/in/dr-jan-k%C3%B6hnlein-7895038' }
 		]
 	},
 	'zeromatter': {
@@ -127,20 +127,20 @@ export const companies: Record<string, Company> = {
 		name: 'Zeromatter',
 		tagline: 'Simulation for autonomous systems',
 		logo: '/portfolioimages/zeromatter.svg',
-		description: 'Zeromatter offers a comprehensive platform designed to build, test, and train autonomous systems via high-fidelity simulation. The offering encompasses high-performance sensor simulation, automatic environment generation, multi-agent co-simulation frameworks, execution infrastructure, and comprehensive tooling for simulation workflows.\n\nEstablished in 2021 and headquartered in Mountain View, California. Founded by Ian Glow, a former Tesla engineer who worked for years on Autopilot driver assistance software.\n\nSecured $45M in funding led by Two Sigma Ventures. Currently employs 48 people.',
+		description: 'Zeromatter provides a unified platform to build, test, and train autonomous systems through high-fidelity simulation. The platform offers high-performance sensor simulation, automatic environment generation, multi-agent co-simulation frameworks, execution infrastructure, and comprehensive tooling for simulation workflows.\n\nFounded in 2021 and based in Mountain View, CA, Zeromatter was started by Ian Glow, who worked for years on Autopilot driver assistance software at Tesla.\n\nRaised $45M led by Two Sigma Ventures. The company has 48 employees.',
 		website: 'https://zeromatter.com',
-		founders: [{ name: 'Ian Glow' }]
+		founders: [{ name: 'Ian Glow', link: 'https://www.linkedin.com/in/ianglow/' }]
 	},
 	'spectral': {
 		slug: 'spectral',
 		name: 'Spectral Labs',
 		tagline: 'Generative model for structured CAD',
 		logo: '',
-		description: 'Spectral Labs developed SGS-1, a foundation model that generates fully manufacturable and parametric 3D geometry, producing CAD B-Rep parts in STEP format.\n\nThe platform can create parametric geometry within assembly contexts, convert sketches and drawings into 3D CAD files, and transform scans, STL files, or mesh data into parametric STEP files. This functionality automates reverse engineering workflows.\n\nThe model is accessible on Hugging Face and can generate 3D CAD models from images.',
+		description: 'Spectral Labs created SGS-1, the first generative model for structured CAD. SGS-1 is a foundation model that generates fully manufacturable and parametric 3D geometry, producing CAD B-Rep parts in STEP format for engineering use cases.\n\nSGS-1 capabilities include creating new parametric geometry within assembly contexts, transforming sketches and drawings into 3D CAD files, and converting scans, STL files, or mesh files to parametric STEP files—automating reverse engineering workflows.\n\nThe model is available on Hugging Face and can generate 3D CAD models from images.',
 		website: 'https://spectrallabs.ai',
 		founders: [
-			{ name: 'Pranav Parthasarathy' },
-			{ name: 'Rahul Iyer' }
+			{ name: 'Pranav Parthasarathy', link: 'https://www.linkedin.com/in/pranav-parthasarathy-82674811b/' },
+			{ name: 'Rahul Iyer', link: 'https://www.linkedin.com/in/rahul8iyer/' }
 		]
 	},
 	'lemurian': {
@@ -148,7 +148,7 @@ export const companies: Record<string, Company> = {
 		name: 'Lemurian Labs',
 		tagline: 'Universal compiler and runtime for AI',
 		logo: '/portfolioimages/lemurian.svg',
-		description: 'Lemurian Labs develops infrastructure for the autonomy economy by creating a universal software layer that abstracts hardware heterogeneity. The platform enables code written once to execute across diverse chips, configurations, clouds, and scales seamlessly.\n\nThe company tackles a fundamental constraint: AI systems remain locked within proprietary hardware ecosystems and fragmented software environments. Their solution reimagines compilers and runtimes from first principles, making disparate systems operate as a unified whole.\n\nKey benefits include 2-30x performance gains alongside reduced costs, vendor independence, and workflow simplification.',
+		description: 'Lemurian Labs is building the software foundation for the autonomy economy, solving the single biggest constraint on AI progress by creating a universal software layer that makes every chip, in every configuration, in every cloud, at every scale, usable as if it were one machine.\n\nThe company addresses a critical problem: AI is trapped behind walls of proprietary hardware and fragmented software. Lemurian\'s breakthrough lies in a first principles rethink of compilers and runtimes that makes heterogeneous systems feel like one seamless machine.\n\nDevelopers write code once and it runs anywhere—faster, cheaper, and without lock-in—while simplifying workflows and delivering 2-30x performance gains.',
 		website: 'https://lemurianlabs.com',
 		founders: [
 			{ name: 'Jay Dawani' },
@@ -161,10 +161,10 @@ export const companies: Record<string, Company> = {
 		name: 'Northflank',
 		tagline: 'Self-service PaaS on Kubernetes',
 		logo: '',
-		description: 'Northflank provides a self-service Platform as a Service (PaaS) built on Kubernetes, allowing developers to deploy any project in seconds, either in Northflank\'s cloud or the customer\'s own cloud infrastructure (BYOC).\n\nThe platform abstracts Kubernetes complexity while maintaining infrastructure control for platform engineers. It supports deployments across six-plus cloud providers and processes substantial scale—over 10 billion monthly public egress requests and 1.3 million monthly container deployments.\n\nNotable clients include NFL.com, Sentry, Writer, and Chai Discovery.',
+		description: 'Northflank is a self-service Platform as a Service (PaaS) built on Kubernetes that enables developers to deploy any project in seconds, either in Northflank\'s cloud or the customer\'s own cloud infrastructure (BYOC). The platform provides a powerful abstraction layer over Kubernetes, delivering a PaaS-like deployment experience for developers while giving platform engineers full control of underlying infrastructure.\n\nThe platform empowers tens of thousands of developers to deploy production workloads across more than six cloud providers, handling over 10 billion public egress requests monthly and orchestrating more than 1.3 million container deployments per month.\n\nNotable customers include NFL.com, Sentry, Writer, and Chai Discovery.',
 		website: 'https://northflank.com',
 		founders: [
-			{ name: 'Will Stewart' },
+			{ name: 'Will Stewart', link: 'https://www.linkedin.com/in/william-j-stewart/' },
 			{ name: 'Frederik Brix' }
 		]
 	},
@@ -173,18 +173,18 @@ export const companies: Record<string, Company> = {
 		name: 'OpenMind',
 		tagline: 'Decentralized embodied intelligence',
 		logo: '/portfolioimages/openmind.svg',
-		description: 'OpenMind develops OM1, an open-source AI software platform designed to enable robots to develop cognitive capabilities and work together. The system operates across different robot types including quadrupeds, humanoids, wheeled platforms, and aerial drones without being locked to specific hardware.\n\nThe company\'s distinguishing innovation is the FABRIC protocol—a decentralized architecture that facilitates robot identity verification, information sharing, and autonomous coordination across multiple units.\n\nSecured $20 million in Series funding led by Pantera Capital, with support from Ribbit Capital, Coinbase Ventures, and Pebblebed Ventures.',
+		description: 'OpenMind is building OM1, an open-source, AI-native software stack that enables robots to think, learn, and coordinate with each other. The platform is hardware-agnostic, running across quadrupeds, humanoids, wheeled robots, and drones.\n\nThe key innovation is FABRIC protocol, a decentralized system that allows robots to verify identity, share context, and coordinate autonomously with other robots—creating a network of embodied intelligence that grows more capable as more robots join.\n\nRaised $20M led by Pantera Capital, with participation from Ribbit, Coinbase Ventures, and Pebblebed.',
 		website: 'https://openmind.org',
-		founders: [{ name: 'Jan Liphardt' }]
+		founders: [{ name: 'Jan Liphardt', link: 'https://www.linkedin.com/in/jan-liphardt/' }]
 	},
 	'orchid': {
 		slug: 'orchid',
 		name: 'Orchid',
 		tagline: 'Whole genome screening for IVF',
 		logo: '/portfolioimages/orchid.svg',
-		description: 'Orchid is a reproductive technology company offering the world\'s first whole genome report for embryos during IVF.\n\nThe platform sequences over 99% of an embryo\'s genome, substantially more than existing alternatives that sequence less than 1%. It uses the same 4-6 cells required for traditional embryo screening, identifies variants associated with more than 1,200 monogenic disorders, and evaluates polygenic disease risks.\n\nThe test can detect birth defects, neurodevelopmental disorders, chromosomal abnormalities, and predispositions to both pediatric and adult-onset cancers before pregnancy begins.',
+		description: 'Orchid is a reproductive technology company offering the world\'s first whole genome report for embryos during IVF. The test can identify birth defects, neurodevelopmental disorders, chromosomal abnormalities, and pediatric and adult-onset cancers before a pregnancy begins.\n\nOrchid\'s 30x whole genome reports sequence over 99% of an embryo\'s genome (compared to existing options that sequence less than 1%), using the same 4-6 cells required for traditional embryo screening. The platform screens for variants linked to more than 1,200 monogenic disorders and assesses polygenic disease risks.',
 		website: 'https://orchidhealth.com',
-		founders: [{ name: 'Noor Siddiqui', link: 'https://twitter.com/noorsiddiqui' }],
+		founders: [{ name: 'Noor Siddiqui', link: 'https://www.linkedin.com/in/noorsiddiqui/' }],
 		news: [
 			{
 				title: 'Should human life be optimized?',
@@ -205,9 +205,9 @@ export const companies: Record<string, Company> = {
 		name: 'Lynq',
 		tagline: 'AI-powered assistants for SMBs',
 		logo: '',
-		description: 'Lynq.ai develops AI-powered assistants that streamline operations for fund managers and analysts by automating routine tasks through intelligent workflows. The platform is specifically designed for the finance sector, with particular emphasis on venture capital firms, offering custom AI-powered workflows and search capabilities.\n\nBeyond the VC space, the company extends its offerings to small and medium-sized businesses with AI agents designed to support continuous 24/7 operations.\n\nSecured $2 million in funding and launched a beta platform for VC firms.',
+		description: 'Lynq.ai provides AI-powered assistants that automate routine tasks for fund managers and analysts through intelligent workflows. The platform specializes in custom AI-powered workflows and search functionalities tailored to the finance industry, particularly venture capital firms. The company also offers AI agents for SMBs, built to run operations 24/7. Raised $2M in funding and launched beta platform for VC firms.',
 		website: 'https://lynq.ai',
-		founders: [{ name: 'Paul Sheridan' }]
+		founders: [{ name: 'Paul Sheridan', link: 'https://ie.linkedin.com/in/paulfsheridan' }]
 	},
 	'keru': {
 		slug: 'keru',
@@ -217,8 +217,8 @@ export const companies: Record<string, Company> = {
 		description: 'In stealth mode.',
 		website: 'https://keru.ai',
 		founders: [
-			{ name: 'Vinoo Ganesh' },
-			{ name: 'John McRaven' }
+			{ name: 'Vinoo Ganesh', link: 'https://www.linkedin.com/in/vinoo-ganesh' },
+			{ name: 'John McRaven', link: 'https://www.linkedin.com/in/john-mcraven-1188324b/' }
 		]
 	},
 	'adaptive-computer': {
@@ -226,10 +226,10 @@ export const companies: Record<string, Company> = {
 		name: 'Adaptive Computer',
 		tagline: 'Build apps with natural language',
 		logo: '',
-		description: 'Adaptive Computer is transforming personal computer software to allow non-programmers to develop full-featured applications through text prompts. Their platform, AC1, lets users without coding skills construct web applications using natural language—eliminating the need for API keys, configuration, or technical expertise.\n\nThe company operates in the "vibe coding" category but focuses specifically on serving non-technical users from inception.\n\nSecured $7 million in seed funding led by Pebblebed Ventures. Additional investors included Conviction, Weekend Fund, Anti Fund (Jake Paul), and Roblox CEO Dave Baszucki.',
+		description: 'Adaptive Computer is reimagining personal computer software to enable non-programmers to create full-featured apps simply by entering text prompts. The platform, called AC1, enables anyone with no programming skills to build robust web applications using natural language commands—no API keys, no configurations, no technical understanding required.\n\nAdaptive competes in the "vibe coding" space but is specifically designed for non-programmers from the ground up.\n\nRaised $7M seed round led by Pebblebed, with participation from Conviction, Weekend Fund, Anti Fund (Jake Paul), and Roblox CEO Dave Baszucki.',
 		website: 'https://adaptive.ai',
 		founders: [
-			{ name: 'Dennis Xu' },
+			{ name: 'Dennis Xu', link: 'https://www.linkedin.com/in/xudennis' },
 			{ name: 'Mike Soylu' }
 		]
 	},
@@ -238,10 +238,10 @@ export const companies: Record<string, Company> = {
 		name: 'Oxen',
 		tagline: 'Git for ML datasets',
 		logo: '',
-		description: 'Oxen is a data version control system designed to simplify dataset management in machine learning workflows. The platform handles both structured and unstructured data, from single CSV files to repositories containing millions of images, videos, audio, and text files.\n\nKey features include a Git-like interface tailored for ML operations with significant performance advantages: 40x faster than Git-LFS and 6.5x faster than simple S3 copy operations.\n\nEnables cross-functional collaboration among ML engineers, data scientists, product managers, and legal teams for shared data review and editing.',
+		description: 'Oxen is a lightning-fast data version control system for structured and unstructured machine learning datasets that aims to make versioning datasets as easy as versioning code. The platform is built to track and store changes for everything from a single CSV to data repositories with millions of unstructured images, videos, audio, or text files.\n\nOxen\'s interface mirrors Git but is optimized for ML workflows. Performance benchmarks show Oxen is 40x faster than Git-LFS and 6.5x faster than simple S3 copy operations.\n\nThe platform enables collaboration across ML engineering, data science, product, and legal teams to share, review, and edit data together.',
 		website: 'https://oxen.ai',
 		founders: [
-			{ name: 'Greg Schoeninger' },
+			{ name: 'Greg Schoeninger', link: 'https://www.linkedin.com/in/greg-schoeninger/' },
 			{ name: 'Scott Howard' }
 		]
 	},
@@ -250,12 +250,12 @@ export const companies: Record<string, Company> = {
 		name: 'Dylibso',
 		tagline: 'WebAssembly infrastructure for plugins',
 		logo: '',
-		description: 'Dylibso creates WebAssembly infrastructure enabling plugin systems and user-defined code execution. Their offerings span XTP (a plugin system platform), Extism (an open-source universal plugin system), Chicory (a Java WebAssembly runtime), and mcp.run (an AI tools registry for the Model Context Protocol).\n\nThe company works with Axiom and Figma (through their Observe SDK), plus engagements involving WordPress/Automattic, BigCommerce, and Confluent.',
+		description: 'Dylibso builds WebAssembly infrastructure and developer tools that enable plugin systems and user-defined code execution in platforms. Key products include XTP (platform for building plugin systems), Extism (open-source universal plugin system), Chicory (Java-native WebAssembly runtime), and mcp.run (registry of AI tools for the Model Context Protocol).\n\nBusiness partnerships include Axiom, Figma (using Observe SDK), and engagements with WordPress/Automattic, BigCommerce, Confluent, and others.',
 		website: 'https://dylibso.com',
 		founders: [
-			{ name: 'Steve Manuel' },
+			{ name: 'Steve Manuel', link: 'https://www.linkedin.com/in/stevemanuel/' },
 			{ name: 'Zach Gray' },
-			{ name: 'Benjamin Eckel' }
+			{ name: 'Benjamin Eckel', link: 'https://www.linkedin.com/in/benjamin-eckel-b025831a3/' }
 		]
 	},
 	'datalab': {
@@ -263,11 +263,11 @@ export const companies: Record<string, Company> = {
 		name: 'Datalab',
 		tagline: 'Document intelligence for enterprise AI',
 		logo: '',
-		description: 'Datalab specializes in developing AI models for document intelligence tasks. The company focuses on three core areas: OCR, layout analysis, and PDF to markdown conversion. They create compact foundation models ranging from 100-500M parameters that convert complex documents into structured, machine-readable data while operating efficiently on standard consumer GPUs.\n\nTheir open-source models are state-of-the-art, easy to use, and have been adopted by hundreds of teams and researchers at leading institutions like Anthropic, Harvard, Stanford, and MIT.\n\nCompleted a $3.5M seed round led by Pebblebed Ventures, with additional backing from Peak XV Partners and notable angel investors including Balaji Srinivasan, Jeff Hammerbacher, and co-founders of Hugging Face.',
+		description: 'Datalab trains specialized AI models for document intelligence, focusing on OCR, layout analysis, and PDF to markdown conversion. The company develops smaller foundation models (100-500M parameters) capable of transforming complex documents into machine-readable structured data at scale, while running on consumer-grade GPUs.\n\nTheir open-source models are state-of-the-art, easy to use, and have been adopted by hundreds of teams and researchers at leading institutions like Anthropic, Harvard, Stanford, and MIT.\n\nRaised $3.5M seed round led by Pebblebed, with participation from Peak XV and angels including Balaji Srinivasan, Jeff Hammerbacher, and founding members of Hugging Face.',
 		website: 'https://datalab.to',
 		founders: [
-			{ name: 'Vik Paruchuri' },
-			{ name: 'Sandy Kwon' }
+			{ name: 'Vik Paruchuri', link: 'https://www.linkedin.com/in/vikparuchuri' },
+			{ name: 'Sandy Kwon', link: 'https://www.linkedin.com/in/sandykwon' }
 		]
 	},
 	'vidoc': {
@@ -275,11 +275,11 @@ export const companies: Record<string, Company> = {
 		name: 'Vidoc Security',
 		tagline: 'AI Security Engineer',
 		logo: '',
-		description: 'Vidoc Security Lab develops an AI-powered security platform that combines machine speed with human expertise. The platform detects, validates, and fixes security issues, monitoring organizations from a hacker\'s perspective to catch misconfigurations and vulnerabilities in real-time.\n\nThe company specifically addresses security vulnerabilities that emerge from AI-generated code.\n\nSecured $2.4 million in October 2024 led by Pebblebed and Firestreak Ventures, with additional support from XFactor Ventures and 500 Emerging Europe.',
+		description: 'Vidoc Security Lab is building an AI Security Engineer that matches the speed of AI with the precision of human security engineers. The company detects, validates, and fixes security issues, monitoring organizations from a hacker\'s perspective to catch misconfigurations and vulnerabilities in real-time.\n\nVidoc addresses the security challenges created by AI-generated code.\n\nRaised $2.4M in October 2024 led by Pebblebed and Firestreak Ventures, with participation from XFactor Ventures and 500 Emerging Europe.',
 		website: 'https://vidocsecurity.com',
 		founders: [
-			{ name: 'Klaudia Kloc' },
-			{ name: 'Dawid Moczadlo' }
+			{ name: 'Klaudia Kloc', link: 'https://www.linkedin.com/in/klaudia-kloc-/' },
+			{ name: 'Dawid Moczadło', link: 'https://www.linkedin.com/in/dawid-moczadlo/' }
 		]
 	},
 	'anomaly-bio': {
@@ -290,8 +290,8 @@ export const companies: Record<string, Company> = {
 		description: 'In stealth mode.',
 		website: 'https://anomalybio.com',
 		founders: [
-			{ name: 'Armaan Dhanda' },
-			{ name: 'Samyak Baid' }
+			{ name: 'Armaan Dhanda', link: 'https://www.linkedin.com/in/armaandh' },
+			{ name: 'Samyak Baid', link: 'https://www.linkedin.com/in/samyak-baid/' }
 		]
 	},
 	'ulysses': {
@@ -299,7 +299,7 @@ export const companies: Record<string, Company> = {
 		name: 'Ulysses',
 		tagline: 'AUVs for ocean restoration',
 		logo: '',
-		description: 'Ulysses creates autonomous underwater vehicles designed for ocean ecosystem restoration, specifically targeting seagrass restoration projects. The company manufactures fully autonomous, low-cost maritime robots that function across surface and subsea environments.\n\nSeagrass restoration is 100x faster than manual volunteer planting with 10x reduction in costs compared to alternative robotic solutions. Seagrass acts as a carbon sink capturing 35 times more carbon than rainforests.\n\nFounded in 2023. Secured $2M seed led by Lowercarbon Capital.',
+		description: 'Ulysses Ecosystem Engineering makes "cheap and cheerful" autonomous underwater vehicles that operate across both surface and subsea domains. Founded in 2023, the company is transforming ocean ecosystem restoration with fully autonomous, low-cost maritime robots.\n\nThe company\'s first focus is seagrass restoration—a vital habitat for biodiversity, fisheries, and coastal resilience—and a powerful carbon sink capturing 35 times more carbon than rainforests. Their robots speed up restoration by 100x compared to manual planting by volunteers and at a fraction of the cost of other robots, reducing restoration costs by 10x while making projects 100 times larger and faster.\n\nUlysses raised $2M led by Lowercarbon Capital.',
 		website: 'https://ulysses.eco',
 		founders: [
 			{ name: 'Akhil Voorakkara' },
@@ -313,11 +313,11 @@ export const companies: Record<string, Company> = {
 		name: 'Cedana',
 		tagline: 'VMware for GPUs',
 		logo: '',
-		description: 'Cedana (YC S23) specializes in GPU orchestration infrastructure for AI workloads. The company\'s foundational technology enables live migration and checkpoint/restore infrastructure for GPU-heavy workloads, enabling stateful reliability even through catastrophic GPU failures.\n\nTheir system operates at the Driver API level to reliably, transparently, and deterministically capture and restore GPU state for multi-GPU workloads.\n\nKey metrics: up to 80% cost savings, 2-10x acceleration of time to first token, and cold starts restored an order of magnitude faster than native implementations.',
+		description: 'Cedana (YC S23) brings hyperscaler and frontier-lab orchestration capabilities for AI workflows, with GPU live migration as their core capability. Described as "VMware for GPUs," Cedana enables enterprises to orchestrate AI workloads precisely, reliably, and efficiently.\n\nThe company builds live migration and checkpoint/restore infrastructure for GPU-heavy workloads, enabling stateful reliability even through catastrophic GPU failures. Their technology interposes at the Driver API to reliably, transparently, and deterministically capture and restore GPU state for multi-GPU workloads.\n\nPerformance: Increases cost savings up to 80%, accelerates time to first token 2-10x, and restored cold starts are an order of magnitude faster than native cold starts.',
 		website: 'https://cedana.ai',
 		founders: [
-			{ name: 'Neel Master' },
-			{ name: 'Niranjan Ravichandra' }
+			{ name: 'Neel Master', link: 'https://www.linkedin.com/in/neelmaster1/' },
+			{ name: 'Niranjan Ravichandra', link: 'https://www.linkedin.com/in/niranjanravichandra/' }
 		]
 	},
 	'principia': {
@@ -325,9 +325,9 @@ export const companies: Record<string, Company> = {
 		name: 'Principia Labs',
 		tagline: 'AI for mathematical discovery',
 		logo: '',
-		description: 'Principia Labs aims to develop artificial intelligence systems for creating novel mathematical discoveries, rather than excelling at applying existing mathematical techniques. The organization emphasizes building AI capable of generating fresh mathematical insights instead of merely solving established problems.',
+		description: 'Principia Labs has the ambition to build AIs for making new mathematical discoveries, as opposed to scoring well on tests of human virtuosity at applying existing mathematical tools (like the Putnam, etc.). The company focuses on AI systems capable of generating novel mathematical insights rather than just solving known problems.',
 		website: 'https://principialabs.org',
-		founders: [{ name: 'Harrison Sanders' }]
+		founders: [{ name: 'Harrison (Harry) Sanders' }]
 	},
 	'aneta': {
 		slug: 'aneta',
@@ -336,27 +336,30 @@ export const companies: Record<string, Company> = {
 		logo: '',
 		description: 'Aneta is automating the legacy tools scientists use every day. The company leverages AI capabilities like Claude Computer Use to enable AI systems to interact with and automate scientific workflows, allowing researchers to focus on their work rather than manual tool operation.',
 		website: 'https://aneta.company',
-		founders: [{ name: 'Yasyf Mohamedali' }]
+		founders: [{ name: 'Yasyf Mohamedali', link: 'https://www.linkedin.com/in/yasyf/' }]
 	},
 	'build': {
 		slug: 'build',
 		name: 'Build',
 		tagline: 'AI for commercial real estate reports',
 		logo: '',
-		description: 'AI for commercial real estate reports.',
-		website: '',
-		founders: []
+		description: 'Build specializes in high-tech, high-touch development services tailored for mission-critical projects, ensuring reliable and innovative solutions for complex challenges. The company is building an AI agent for commercial real estate report generation.\n\nBased in Chicago, Illinois, Build provides technology solutions for the construction and real estate industries, combining automated report generation with expert development services for complex, mission-critical projects.',
+		website: 'https://www.build.inc',
+		founders: [
+			{ name: 'James Stirrat-Ellis' },
+			{ name: 'Ben McClusky' }
+		]
 	},
 	'headquarters-health': {
 		slug: 'headquarters-health',
 		name: 'Headquarters Health',
 		tagline: 'AI telehealth for concussion care',
 		logo: '',
-		description: 'Headquarters Health operates an AI-powered telehealth platform targeting youth sports concussion management. The company addresses a significant regulatory gap: U.S. high schools and youth sports organizations must provide proper return-to-play protocols following traumatic brain injuries, yet many lack adequate medical oversight.\n\nTheir solution enables sports organizations to fulfill compliance requirements while delivering remote medical assessment and care for student athletes with concussions.',
+		description: 'Headquarters Health improves concussion care through AI-assisted telehealth. The company addresses the compliance burden faced by all youth sports sponsors in the US, including every high school, which are required to provide better return-to-play protocols than "go home and sleep it off" after youth traumatic brain injuries (TBIs).\n\nHeadquarters Health provides AI-powered telehealth services that enable youth sports organizations to meet their compliance obligations while ensuring proper medical assessment and care for student athletes who experience concussions. Based in San Francisco, the company focuses on improving outcomes for young athletes.',
 		website: 'https://headquarters.health',
 		founders: [
-			{ name: 'Orestis Skoutellas' },
-			{ name: 'Lucas Johnston' }
+			{ name: 'Orestis Skoutellas', link: 'https://www.linkedin.com/in/orestisskoutellas/' },
+			{ name: 'Lucas Johnston', link: 'https://www.linkedin.com/in/lucas-johnston1/' }
 		]
 	},
 	'logical-intelligence': {
@@ -364,11 +367,11 @@ export const companies: Record<string, Company> = {
 		name: 'Logical Intelligence',
 		tagline: 'AI for formal verification',
 		logo: '/portfolioimages/logicalintelligence.png',
-		description: 'Logical Intelligence operates as a fundamental AI research organization focused on advancing reasoning capabilities in automated theorem-proving systems. Their primary goal involves enabling theorem-provers to verify large-scale computer programs reliably.\n\nThe organization has developed an AI system called Aleph that transforms source code into mathematical proofs capable of being verified with complete accuracy. Their approach utilizes formal verification techniques—a rigorous method for proving software correctness mathematically rather than through testing alone.\n\nThe team includes a Fields Medal laureate and an international programming competition champion.',
+		description: 'Logical Intelligence is a fundamental AI research organization that uses new techniques in reasoning to make theorem-provers capable of verifying large computer programs. Their early commercial traction is in the crypto space, where billions of dollars might be at stake for software errors.\n\nThe company uses a process called "formal verification" and has developed a model that allows an AI agent called Aleph to convert code into mathematical proofs that can be verified to 100% accuracy. The team includes a Fields Medal winner and programming world champion.',
 		website: 'https://logicalintelligence.com',
 		founders: [
 			{ name: 'Eve Bodnia' },
-			{ name: 'Vladislav Isenbaev' }
+			{ name: 'Vladislav Isenbaev', link: 'https://www.linkedin.com/in/isenbaev/' }
 		]
 	},
 	'orbit': {
@@ -376,11 +379,11 @@ export const companies: Record<string, Company> = {
 		name: 'Orbit Engineering',
 		tagline: 'Non-invasive BCI via vestibular stim',
 		logo: '',
-		description: 'Orbit Engineering develops brain-computer interface technology through vestibular stimulation methods. Their wearable device, worn behind the ears, delivers electrical signals to create deeply immersive experiences for entertainment applications including gaming and television.\n\nThe technology works by transmitting artificial electrical impulses to the vestibular system, which triggers the brain to perceive realistic movement sensations, resulting in hyper-immersive illusions of movement.\n\nEarly findings suggest potential sleep benefits, with preliminary data indicating users could reduce sleep duration from 8 hours to approximately 6.5 hours while maintaining normal function.',
+		description: 'Orbit Engineering builds non-invasive brain-computer interface technology using vestibular stimulation. The company\'s device, placed behind users\' ears, uses electrical stimulation to create immersive experiences for video games, TV shows, and other media. Orbit\'s novel brain-computer-interface decodes emotion, making technology empathetic.\n\nWhen Orbit sends artificial electrical signals to the brain\'s vestibular system, simulating movement patterns, the brain interprets them as real, creating hyper-immersive illusions of movement. Early research shows promise for increasing sleep efficacy, with normal subjects potentially requiring 6.5 hours of sleep instead of 8.',
 		website: 'https://orbit.engineering',
 		founders: [
-			{ name: 'Steven Pang' },
-			{ name: 'Colton El-Habr' }
+			{ name: 'Steven Pang', link: 'https://www.linkedin.com/in/steven-pang-625004218/' },
+			{ name: 'Colton El-Habr', link: 'https://www.linkedin.com/in/colton-el-habr-7b7159223/' }
 		]
 	},
 	'resonate': {
@@ -388,29 +391,29 @@ export const companies: Record<string, Company> = {
 		name: 'Resonate',
 		tagline: 'Distributed async await for cloud',
 		logo: '',
-		description: 'Resonate develops a programming framework designed for distributed systems that eliminates fragile integration patterns. The platform introduces Distributed Async Await—a procedural async/await model functioning across multiple distributed processes. This enables teams to construct dependable and scalable cloud solutions.\n\nThe platform emphasizes three key qualities: dead simple, formally verified, and deterministically tested. Primary applications include orchestrating microservices, building transactional systems, and creating autonomous agents.',
+		description: 'Resonate is building a developer-friendly programming model for distributed execution that replaces brittle integrations in distributed systems. The platform provides Distributed Async Await, a procedural async/await programming model that works across distributed processes, enabling developers to build reliable and scalable cloud applications.\n\nResonate offers distributed, durable, and composable functions that are "dead simple, formally verified, and deterministically tested." Use cases include service orchestration, transactional applications, and autonomous systems.',
 		website: 'https://resonatehq.io',
-		founders: [{ name: 'Dominik Tornow' }]
+		founders: [{ name: 'Dominik Tornow', link: 'https://www.linkedin.com/in/dtornow/' }]
 	},
 	'storyteller': {
 		slug: 'storyteller',
 		name: 'Storyteller',
 		tagline: 'AI voice synthesis for video',
 		logo: '',
-		description: 'Storyteller.AI is a platform offering AI-driven tools for video content creators. The service enables users to generate synthetic voices and audio through features like text-to-speech, voice-to-voice conversion, and voice designer tools.\n\nThe platform leverages text-to-speech and deep fake technology to transform speech into unique characters, facilitating the creation of custom voice content for storytelling and video production purposes.\n\nFounded in 2022 in Atlanta.',
+		description: 'Storyteller.AI provides AI-powered storytelling tools for video content creation. Founded in 2022 and based in Atlanta, the platform enables users to create synthetic voices and audio with features including text-to-speech, voice-to-voice conversion, and voice designer capabilities.\n\nThe company\'s technology combines text-to-speech and deep fake technology to transform speech into unique characters, making it easy for creators to generate custom voice content for storytelling and video production.',
 		website: 'https://storyteller.ai',
-		founders: [{ name: 'Brandon Thomas' }]
+		founders: [{ name: 'Brandon Thomas', link: 'https://www.linkedin.com/in/possibilistic' }]
 	},
 	'tau': {
 		slug: 'tau',
 		name: 'Tau Robotics',
 		tagline: 'General-purpose AI for robotic arms',
 		logo: '',
-		description: 'Tau Robotics develops artificial intelligence technology designed for robotic arms that learns autonomously in real-world environments with minimal human direction. The company targets versatile applications spanning delicate surgical procedures, high-speed manufacturing operations, and agricultural automation.\n\nTheir methodology emphasizes autonomous data collection by robots, capturing both failures and successful recoveries while reducing dependence on human guidance and manual control. The technical foundation centers on world-model based reinforcement learning approaches.',
+		description: 'Tau Robotics builds general AI for robots that learns in the real world with minimal human supervision. The company focuses on developing general-purpose AI for robotic arms, making them versatile and effective across different industries including delicate surgeries, fast-paced manufacturing lines, and automated farming.\n\nTau Robotics\' approach enables robots to collect massive amounts of data autonomously, containing valuable failures and recoveries while minimizing unscalable human language advice and teleoperation. The company develops world-model based reinforcement learning algorithms.',
 		website: 'https://tau-robotics.com',
 		founders: [
-			{ name: 'Cornelia Weinzierl' },
-			{ name: 'Alexander Koch' }
+			{ name: 'Cornelia Weinzierl', link: 'https://www.linkedin.com/in/cornelia-weinzierl/' },
+			{ name: 'Alexander Koch', link: 'https://www.linkedin.com/in/alexkoch-ai/' }
 		]
 	},
 	'wired-labs': {
@@ -421,9 +424,8 @@ export const companies: Record<string, Company> = {
 		description: 'In stealth mode.',
 		website: 'https://wiredlabs.so',
 		founders: [
-			{ name: 'Cora Kyler' , link: 'https://cora.page' },
-
-			{ name: 'Alena Titova' , link: 'https://alena.page' }
+			{ name: 'Cora Kyler', link: 'https://www.linkedin.com/in/cora-k' },
+			{ name: 'Alena Titova', link: 'https://www.linkedin.com/in/a-titova/' }
 		]
 	},
 };
