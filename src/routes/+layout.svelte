@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '../app.css';
 	let { children } = $props();
 </script>
 
@@ -12,40 +13,3 @@
 </svelte:head>
 
 {@render children()}
-
-<style>
-	@font-face {
-		font-family: 'IBM Plex Mono';
-		src: url('/fonts/IBMPlexMono-Regular.ttf') format('truetype');
-		font-weight: 400;
-		font-style: normal;
-		font-display: swap;
-	}
-
-	@font-face {
-		font-family: 'Hanken Grotesk';
-		src: url('/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
-		font-weight: 100 900;
-		font-style: normal;
-		font-display: swap;
-	}
-
-	:global(:root) {
-		--dark-grey: #2F2C2B;
-		--off-white: #FEFEFE;
-	}
-
-	:global(*) {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-
-	:global(body) {
-		font-family: 'IBM Plex Mono', monospace;
-		background-color: var(--off-white);
-		color: var(--dark-grey);
-		line-height: 1.6;
-		min-height: 100vh;
-	}
-</style>
