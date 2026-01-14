@@ -1,9 +1,16 @@
 <header>
 	<div class="header-content">
-		<div class="logo">
-			<img src="/pb_logo.svg" alt="Pebblebed logo" />
+		<div class="brand">
+			<div class="logo">
+				<img src="/pb_logo.svg" alt="Pebblebed logo" />
+			</div>
+			<span class="site-title">pebblebed</span>
 		</div>
-		<span class="site-title">pebblebed</span>
+		<nav>
+			<a href="/portfolio">portfolio</a>
+			<a href="/team">team</a>
+			<a href="/writing">writing</a>
+		</nav>
 	</div>
 </header>
 
@@ -19,11 +26,16 @@
 	.header-content {
 		display: flex;
 		align-items: center;
-		gap: 8px;
-		margin-bottom: 8px;
+		justify-content: space-between;
 		max-width: 900px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.brand {
+		display: flex;
+		align-items: center;
+		gap: 8px;
 	}
 
 	.logo {
@@ -44,4 +56,20 @@
 		color: var(--dark-grey);
 	}
 
+	nav {
+		display: flex;
+		gap: 24px;
+	}
+
+	nav a {
+		font-family: 'Hanken Grotesk', sans-serif;
+		font-size: 14px;
+		font-weight: 500;
+		color: var(--dark-grey);
+		text-decoration: none;
+	}
+
+	nav a:hover {
+		opacity: 0.7;
+	}
 </style>

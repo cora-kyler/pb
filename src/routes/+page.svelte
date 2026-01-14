@@ -32,10 +32,12 @@
 		display: flex;
 		align-items: center;
 		gap: 48px;
+		padding-bottom: 48px;
+		border-bottom: 1px solid var(--light-grey);
 	}
 
 	.hero-text {
-		font-size: 17px;
+		font-size: 15px;
 		line-height: 1.8;
 		color: var(--dark-grey);
 		max-width: 720px;

@@ -33,6 +33,10 @@
 	:global(:root) {
 		--dark-grey: #2F2C2B;
 		--off-white: #FEFEFE;
+		--light-grey: #e5e5e5;
+		--bright-pink: #E223DC;
+		--black: #110301;
+		--hover-grey: #D4D1D1;
 	}
 
 	:global(*) {
