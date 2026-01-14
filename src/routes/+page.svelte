@@ -9,14 +9,21 @@
 <Header />
 
 <div class="mx-auto max-w-[900px] px-6 py-10">
-	<section class="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
+	<section class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
 		<div class="text-sm leading-[1.8] text-dark-grey space-y-[1.5em] md:max-w-[720px]">
-			<p class="text-lg text-pink">We are a venture capital firm based in San Francisco, built by and for technologists.</p>
-			<p>We invest in the foundational layers of progress: developer platforms that accelerate creation, robot operating systems that make autonomy real, simulation engines training the next generation of AI, and formal verification securing billions in value.</p>
+			<p class="text-lg text-pink text-balance">We are a venture capital firm based in <span class="whitespace-nowrap">San Francisco</span>, built by and for technologists.</p>
+			<p class="text-balance">We invest in the foundational layers of progress: developer platforms that accelerate creation, robot operating systems that make autonomy real, simulation engines training the next generation of AI, and formal verification securing billions in value.</p>
 			<p>We work with founders who choose the hard problems — who believe constraints sharpen ideas, and elegance emerges from complexity.</p>
 		</div>
-		<div class="w-[200px] md:w-[280px] shrink-0">
-			<img src="/pebbles1.png" alt="Pebblebed illustration" class="w-full h-auto" />
+		<div class="w-full md:w-[280px] shrink-0">
+			<div class="flex items-center gap-4 md:block">
+				<img src="/pebbles1.png" alt="Pebblebed illustration" class="w-[45%] md:w-full h-auto shrink-0" />
+				<p class="text-[10px] text-dark-grey/50 leading-relaxed md:hidden">A pebblebed reactor can't melt down — safety emerges from physics, not intervention. We named our firm after this principle.</p>
+			</div>
+			<div class="hidden md:flex items-start gap-2 mt-3">
+				<img src="/arrow.svg" alt="" class="w-auto h-12 shrink-0 -mt-12 rotate-15" />
+				<p class="text-[10px] text-dark-grey/50 leading-relaxed">A pebblebed reactor can't melt down — safety emerges from physics, not intervention. We named our firm after this principle.</p>
+			</div>
 		</div>
 	</section>
 	<hr class="border-t border-dark-grey/20 my-8 md:my-12" />
@@ -28,21 +35,22 @@
 			<img src="/portfolioimages/augment.svg" alt="Augment" class="w-[95%] h-auto object-contain" />
 		</button>
 		<button class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-subtle-glow-strong overflow-hidden cursor-pointer">
+			<img src="/portfolioimages/orchid.svg" alt="Orchid" class="w-[70%] h-auto object-contain" />
+		</button>
+		<button class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-subtle-glow-strong overflow-hidden cursor-pointer">
 			<img src="/portfolioimages/krea.svg" alt="Krea" class="w-[80%] h-auto object-contain" />
 		</button>
 		<button class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-subtle-glow-strong overflow-hidden cursor-pointer">
-			<img src="/portfolioimages/lemurian.svg" alt="Lemurian" class="w-[90%] h-auto object-contain" />
+			<img src="/portfolioimages/zeromatter.svg" alt="ZeroMatter" class="w-[90%] h-auto object-contain" />
 		</button>
 		<button class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-subtle-glow-strong overflow-hidden cursor-pointer">
 			<img src="/portfolioimages/openmind.svg" alt="OpenMind" class="w-[90%] h-auto object-contain" />
 		</button>
 		<button class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-subtle-glow-strong overflow-hidden cursor-pointer">
-			<img src="/portfolioimages/orchid.svg" alt="Orchid" class="w-[70%] h-auto object-contain" />
+			<img src="/portfolioimages/lemurian.svg" alt="Lemurian" class="w-[90%] h-auto object-contain" />
 		</button>
 		<button class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-subtle-glow-strong overflow-hidden cursor-pointer">
-			<img src="/portfolioimages/zeromatter.svg" alt="ZeroMatter" class="w-[90%] h-auto object-contain" />
-		</button>
-		<button class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-subtle-glow-strong cursor-pointer">
+			<img src="/portfolioimages/logicalintelligence.png" alt="Logical Intelligence" class="w-[90%] h-auto object-contain" />
 		</button>
 		<button class="aspect-2/1 bg-white rounded-lg border-dashed flex items-center justify-center p-4 md:p-6 cursor-pointer group">
 			<p class="text-xs text-pink w-full text-center group-hover:underline">View more →</p>
