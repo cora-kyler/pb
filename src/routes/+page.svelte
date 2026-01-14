@@ -15,6 +15,9 @@
 			<p>We invest in the foundational layers of progress: developer platforms that accelerate creation, robot operating systems that make autonomy real, simulation engines training the next generation of AI, and formal verification securing billions in value.</p>
 			<p>We work with founders who choose the hard problems — who believe constraints sharpen ideas, and elegance emerges from complexity.</p>
 		</div>
+		<div class="hero-image">
+			<img src="/pebbles1.png" alt="Pebblebed illustration" />
+		</div>
 	</section>
 </div>
 
@@ -25,12 +28,10 @@
 		padding: 40px 24px;
 	}
 
-	.hero h1 {
-		font-family: 'Source Serif 4', Georgia, serif;
-		font-size: 48px;
-		font-weight: 400;
-		letter-spacing: -1px;
-		margin-bottom: 32px;
+	.hero {
+		display: flex;
+		align-items: center;
+		gap: 48px;
 	}
 
 	.hero-text {
@@ -46,5 +47,15 @@
 
 	.hero-text p:last-child {
 		margin-bottom: 0;
+	}
+
+	.hero-image {
+		flex-shrink: 0;
+		width: 280px;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
 	}
 </style>
