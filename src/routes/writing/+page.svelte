@@ -9,12 +9,12 @@
 
 <Header />
 
-<div class="container">
-	<section class="writing">
-		<h1><span class="slash">//</span> from the lab</h1>
-		<p class="subtitle">experiments by our team, that made it out alive.</p>
+<div class="max-w-[900px] mx-auto px-6 py-10">
+	<section>
+		<h1 class="font-sans text-xl font-medium text-dark-grey mb-2"><span class="text-pink">//</span> from the lab</h1>
+		<p class="font-mono text-xs text-dark-grey mb-10">experiments by our team, that made it out alive.</p>
 
-		<div class="entries">
+		<div class="flex flex-col gap-6">
 			<ExternalHostedWriting
 				tags={['GitHub 2025', 'KAN', 'Transformers', 'Code']}
 				title="KANGPT"
@@ -38,35 +38,3 @@
 	</section>
 </div>
 
-<style>
-	.container {
-		max-width: 900px;
-		margin: 0 auto;
-		padding: 40px 24px;
-	}
-
-	.writing h1 {
-		font-family: 'Hanken Grotesk', sans-serif;
-		font-size: 20px;
-		font-weight: 500;
-		color: var(--black);
-		margin-bottom: 8px;
-	}
-
-	.writing h1 .slash {
-		color: var(--bright-pink);
-	}
-
-	.subtitle {
-		font-style: italic;
-		font-size: 12px;
-		color: var(--dark-grey);
-		margin-bottom: 40px;
-	}
-
-	.entries {
-		display: flex;
-		flex-direction: column;
-		gap: 24px;
-	}
-</style>
