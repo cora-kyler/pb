@@ -45,7 +45,7 @@
 			<button 
 				
 				onclick={() => openModal(company)}
-				class="flex items-center gap-4 py-5 group transition-all duration-200 hover:duration-0 hover:bg-dark-grey/5 -mx-4 px-4 w-full text-left cursor-pointer"
+				class="flex items-center gap-4 py-5 group transition-all duration-200 hover:duration-0 hover:bg-dark-grey/5 md:-mx-4 md:px-4 w-full text-left cursor-pointer"
 			>
 				<h3 class="font-sans font-semibold text-dark-grey w-40 shrink-0 group-hover:text-dark-grey/80">{company.name}</h3>
 				<p class="text-xs text-dark-grey/60 flex-1">{company.tagline}</p>

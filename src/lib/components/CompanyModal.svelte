@@ -26,7 +26,6 @@
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<div 
 		in:scale={{ start: 0.95, duration: 100, easing: quintOut }}
-		out:scale={{ start: 1, duration: 200 }}
 		class="bg-off-white rounded-lg max-w-[720px] w-full max-h-[80vh] shadow-xl relative flex flex-col"
 		onclick={(e) => e.stopPropagation()}
 	>
@@ -57,7 +56,7 @@
 							rel="noopener noreferrer"
 							class="text-base text-pink hover:underline transition-all duration-200 font-sans"
 						>
-							{company.website.replace('https://', '')} ↗
+							{company.website.replace('https://', '')} <span class="no-emoji">↗</span>
 						</a>
 					{/if}
 				</header>
@@ -84,7 +83,7 @@
 									rel="noopener noreferrer"
 									class="text-xs bg-pink text-white px-1 hover:translate-y-[-2px] transition-all duration-200"
 								>
-									{founder.name} ↗
+									{founder.name} <span class="no-emoji">↗</span>
 								</a>
 							{:else}
 								<span class=" text-pink text-xs bg-white border border-pink px-1">{founder.name}</span>
