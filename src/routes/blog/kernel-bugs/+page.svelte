@@ -8,7 +8,6 @@
 	date="January 7, 2026"
 	author="Jenny Guanni Qu"
 	email="jenny@pebblebed.com"
-	shoutout="If you're working on kernel security, vulnerability detection, or ML for code analysis, I'd love to talk: jenny@pebblebed.com"
 >
 	<p>There are bugs in your kernel right now that won't be found for years. I know because I analyzed 125,183 of them, every bug with a traceable <span class="tag">Fixes:</span> tag in the Linux kernel's 20-year git history.</p>
 
@@ -121,5 +120,15 @@
 		<li><strong>VulnBERT catches 92.2%</strong> of bugs on held-out 2024 test set with only 1.2% FPR (98.4% AUC)</li>
 		<li>Dataset: <a href="https://github.com/quguanni/kernel-vuln-data" target="_blank" rel="noopener noreferrer">github.com/quguanni/kernel-vuln-data</a></li>
 	</ul>
+
+	<div class="bg-light-grey/40 border border-dark-grey/10 rounded-lg p-3 md:p-4 mt-10 flex gap-4 items-start leading-[1.4em]">
+		<div class="flex-1">
+			<p class="text-xs text-dark-grey/80 leading-relaxed">
+				If you're working on kernel security, vulnerability detection, or ML for code analysis, I'd love to talk:
+				<a href="mailto:jenny@pebblebed.com" class="text-pink hover:underline" target="_blank" rel="noopener noreferrer">jenny@pebblebed.com</a>
+			</p>
+		</div>
+		<img src="/marker.svg" alt="" class="w-10 h-10 shrink-0" />
+	</div>
 
 </BlogLayout>

@@ -22,7 +22,7 @@
 			<p>This isn't a typical "junior role." You'll work directly with partners, design sourcing systems, stress-test ideas with founders, and sharpen how we invest. We care more about clarity, curiosity, and first-principles judgment than pedigree.</p>
 		</div>
 
-		<img src="/pebbles.svg" alt="" class="h-12 shrink-0 mx-auto mt-12" />
+		<img src="/pebbles.svg" alt="" class="hidden sm:block h-12 shrink-0 mx-auto mt-12" />
 
 		<div class="bg-light-grey/40 border border-dark-grey/10 rounded-lg p-4 md:p-6 mt-10 md:mt-16 flex gap-4 md:gap-6 items-start leading-[1.4em]">
 			<div class="flex-1">
@@ -30,7 +30,7 @@
 					<span class="text-pink">//</span> how to apply
 				</h2>
 				<div class="text-xs md:text-sm text-dark-grey/80 leading-relaxed space-y-3">
-					<p>If this sounds like you, send us a note at <a href="mailto:jobs@pebblebed.com" class="text-pink hover:underline">jobs@pebblebed.com</a> with:</p>
+					<p>If this sounds like you, send us a note at <a href="mailto:jobs@pebblebed.com" class="text-pink hover:underline" target="_blank" rel="noopener noreferrer">jobs@pebblebed.com</a> with:</p>
 					<ul class="space-y-2 list-disc list-inside ml-1 leading-[1.6em]">
 						<li>A 150–200 word reflection on one AI startup you admire (and why).</li>
 						<li>Links you'd like to share (LinkedIn, GitHub, Twitter, personal site — whatever best shows your work/curiosity).</li>

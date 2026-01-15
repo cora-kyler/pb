@@ -1,5 +1,16 @@
 <script lang="ts">
 	import BlogLayout from '$lib/components/BlogLayout.svelte';
+	import dashboardImg from '$lib/assets/krea-blog/dashboard.jpeg?enhanced';
+	import wizardsImg from '$lib/assets/krea-blog/wizards.jpg?enhanced';
+	import pebblesKreaImg from '$lib/assets/krea-blog/pebbles_krea.jpg?enhanced';
+	import pamPebblesImg from '$lib/assets/krea-blog/pam_pebbles.jpg?enhanced';
+	import diegoShirtImg from '$lib/assets/krea-blog/diego_shirt.jpg?enhanced';
+
+	let dashboardLoaded = false;
+	let wizardsLoaded = false;
+	let pebblesLoaded = false;
+	let pamLoaded = false;
+	let diegoLoaded = false;
 </script>
 
 <BlogLayout
@@ -8,11 +19,14 @@
 	author="Keith Adams"
 	email="kma@pebblebed.com"
 >
-	<div class="picture-frame w-full max-w-[400px] mx-auto rounded-lg">
-		<img
-			src="/krea-blog/dashboard.jpeg"
+	<div class="picture-frame img-placeholder w-full max-w-[400px] mx-auto rounded-lg" data-loaded={dashboardLoaded}>
+		<enhanced:img
+			src={dashboardImg}
 			alt="KREA dashboard on a large display"
-			class="w-full rounded-lg"
+			class="img-fade w-full rounded-lg"
+			loading="eager"
+			fetchpriority="high"
+			on:load={() => (dashboardLoaded = true)}
 		/>
 	</div>
 	<p>Picture it: October, 2022. San Francisco, CA. The aftershocks of COVID are still damping face-to-face socialization. "ChatGPT" is more than a month away from being A Thing. We at Pebblebed are a few months into deploying our maiden fund, amidst investor sentiment on AI ranging from apathy to eye-rolls. Two Spanish guys with impeccable personal style and an all-consuming mission to fuse human creativity with the burgeoning capabilities of GenAI first swung by to Pebblebed HQ to talk to us about their startup, KREA.</p>
@@ -36,32 +50,36 @@
 	<p>What happens to culture when everyone can speak in visuals? When the pace of creation is indistinguishable from the pace of thought? We don't know. KREA is where that question begins to take shape.</p>
 	
 	<div class="columns-1 sm:columns-2 gap-6">
-		<div class="picture-frame masonry-item w-full rounded-lg mb-6">
-			<img
-				src="/krea-blog/wizards.jpg"
+		<div class="picture-frame img-placeholder masonry-item w-full rounded-lg mb-6" data-loaded={wizardsLoaded}>
+			<enhanced:img
+				src={wizardsImg}
 				alt="Wizards"
-				class="w-full rounded-lg"
+				class="img-fade w-full rounded-lg"
+				on:load={() => (wizardsLoaded = true)}
 			/>
 		</div>
-		<div class="picture-frame masonry-item w-full rounded-lg mb-6">
-			<img
-				src="/krea-blog/pebbles_krea.jpg"
+		<div class="picture-frame img-placeholder masonry-item w-full rounded-lg mb-6" data-loaded={pebblesLoaded}>
+			<enhanced:img
+				src={pebblesKreaImg}
 				alt="Pebbles and KREA"
-				class="w-full rounded-lg"
+				class="img-fade w-full rounded-lg"
+				on:load={() => (pebblesLoaded = true)}
 			/>
 		</div>
-		<div class="picture-frame masonry-item w-full rounded-lg mb-6">
-			<img
-				src="/krea-blog/pam_pebbles.png"
+		<div class="picture-frame img-placeholder masonry-item w-full rounded-lg mb-6" data-loaded={pamLoaded}>
+			<enhanced:img
+				src={pamPebblesImg}
 				alt="Pam and Pebbles"
-				class="w-full rounded-lg"
+				class="img-fade w-full rounded-lg"
+				on:load={() => (pamLoaded = true)}
 			/>
 		</div>
-		<div class="picture-frame masonry-item w-full rounded-lg mb-6">
-			<img
-				src="/krea-blog/diego_shirt.png"
+		<div class="picture-frame img-placeholder masonry-item w-full rounded-lg mb-6" data-loaded={diegoLoaded}>
+			<enhanced:img
+				src={diegoShirtImg}
 				alt="Diego shirt"
-				class="w-full rounded-lg"
+				class="img-fade w-full rounded-lg"
+				on:load={() => (diegoLoaded = true)}
 			/>
 		</div>
 	</div>

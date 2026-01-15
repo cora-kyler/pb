@@ -1,9 +1,11 @@
 <script lang="ts">
+	import type { Picture } from 'vite-imagetools';
+
 	interface Props {
 		name: string;
 		role: string;
 		description: string;
-		image: string;
+		image: Picture;
 		imageAlt: string;
 		onclick?: () => void;
 	}
@@ -20,5 +22,5 @@
 		<span class="font-mono text-xs text-dark-grey/60 block mb-2">{role}</span>
 		<p class="text-xs text-dark-grey/80 leading-relaxed">{description}</p>
 	</div>
-	<img src={image} alt={imageAlt} class="w-32 aspect-square object-cover bg-white border border-dark-grey/15 shadow-invert shrink-0 rounded-sm transition-transform group-hover:scale-[1.02]" />
+	<enhanced:img src={image} alt={imageAlt} class="w-32 aspect-square object-cover bg-white border border-dark-grey/15 shadow-invert shrink-0 rounded-sm transition-transform group-hover:scale-[1.02]" />
 </a>

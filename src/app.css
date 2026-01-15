@@ -114,3 +114,37 @@ body {
 	padding: 0 4px;
 	border-radius: 2px;
 }
+
+.no-emoji {
+	font-family: 'Segoe UI Symbol', 'Apple Symbols', sans-serif;
+	font-size: 1.4em;
+	position: relative;
+	top: -0.1em;
+}
+
+/* Image placeholder + fade-in */
+.img-placeholder {
+	position: relative;
+	overflow: hidden;
+}
+
+.img-placeholder::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: #f0f0f0;
+	transition: opacity 200ms ease-out;
+}
+
+.img-placeholder[data-loaded='true']::before {
+	opacity: 0;
+}
+
+.img-fade {
+	opacity: 0;
+	transition: opacity 200ms ease-out;
+}
+
+.img-placeholder[data-loaded='true'] .img-fade {
+	opacity: 1;
+}

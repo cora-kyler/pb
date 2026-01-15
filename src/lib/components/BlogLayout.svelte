@@ -21,7 +21,7 @@
 <Header />
 
 <article class="max-w-[900px] mx-auto px-6 md:px-24 py-4 md:py-16">
-	<a href="/writing" class="font-mono text-xs text-pink hover:underline transition-colors mb-8 inline-block">← All writing</a>
+	<a href="/writing" class="font-mono text-xs text-pink hover:underline transition-colors mb-8 inline-block" target="_self">← All writing</a>
 	<header class="mb-10">
 		<h1 class="blog-h1">{title}</h1>
 		<p class="text-xs text-dark-grey leading-relaxed">{date} · by {author} <span class="text-dark-grey/70">({email})</span></p>
