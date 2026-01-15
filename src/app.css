@@ -48,12 +48,6 @@ body {
 	@apply font-mono bg-off-white text-dark-grey leading-relaxed min-h-screen;
 }
 
-.highlight-pink {
-	background-color: rgba(226, 35, 220, 0.08);
-	padding: 0 4px;
-	border-radius: 2px;
-}
-
 .mono-semibold {
 	font-family: 'IBM Plex Mono', monospace;
 	font-weight: 600;
@@ -71,4 +65,28 @@ body {
 .masonry-item {
 	break-inside: avoid;
 	page-break-inside: avoid;
+}
+
+.blog-h2 {
+	font-family: 'Hanken Grotesk', sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	color: #2F2C2B;
+	margin-top: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+/* Auto-style links and code in blog content */
+.blog-content a {
+	color: #E223DC;
+}
+
+.blog-content a:hover {
+	text-decoration: underline;
+}
+
+.blog-content code {
+	background-color: rgba(226, 35, 220, 0.08);
+	padding: 0 4px;
+	border-radius: 2px;
 }
