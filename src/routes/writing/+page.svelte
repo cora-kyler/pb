@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Header from '$lib/components/Header.svelte';
+
 	import BlogCard from '$lib/components/BlogCard.svelte';
 	import ResearchCard from '$lib/components/ResearchCard.svelte';
 </script>
@@ -8,14 +8,21 @@
 	<title>Writing | Pebblebed Ventures</title>
 </svelte:head>
 
-<Header />
+
 
 <div class="max-w-[900px] mx-auto px-6 py-10">
 	<section class="mb-16">
-		<h1 class="font-sans text-[20px] font-lg font-semibold text-dark-grey mb-2">
+		<div class="flex items-start justify-between mb-8">
+			<h2 class="font-sans text-2xl font-semibold text-dark-grey">
+				Writing
+			</h2>
+			<img src="/computer.svg" alt="" class="w-auto h-24 shrink-0" />
+		</div>
+
+		<h1 class="font-sans text-[20px] font-lg font-semibold text-dark-grey mb-2 -mt-8">
 			<span class="text-pink">//</span> blog
 		</h1>
-		<p class="font-mono text-xs text-dark-grey mb-10">thoughts from our team.</p>
+		<p class="font-mono text-xs text-dark-grey mb-10">Thoughts from our team.</p>
 
 		<div class="flex flex-col gap-6">
 			<BlogCard
@@ -41,7 +48,7 @@
 		<h1 class="font-sans text-[20px] font-lg font-semibold text-dark-grey mb-2">
 			<span class="text-pink">//</span> research
 		</h1>
-		<p class="font-mono text-xs text-dark-grey mb-10">experiments from our team.</p>
+		<p class="font-mono text-xs text-dark-grey mb-10">Experiments from our team.</p>
 
 		<div class="flex flex-col gap-6">
 			<ResearchCard

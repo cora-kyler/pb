@@ -419,7 +419,7 @@ export const companies: Record<string, Company> = {
 	'wired-labs': {
 		slug: 'wired-labs',
 		name: 'Wired Labs',
-		tagline: 'Consumer social',
+		tagline: 'In stealth mode',
 		logo: '',
 		description: 'In stealth mode.',
 		website: 'https://wiredlabs.so',

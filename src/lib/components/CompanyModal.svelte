@@ -4,6 +4,15 @@
 	import { quintOut } from 'svelte/easing';
 
 	let { company, onClose }: { company: Company; onClose: () => void } = $props();
+
+	// Manage body overflow when modal is open
+	$effect(() => {
+		document.body.style.overflow = 'hidden';
+		
+		return () => {
+			document.body.style.overflow = '';
+		};
+	});
 </script>
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -89,7 +98,7 @@
 			{#if company.description}
 				<section class="mb-8 space-y-4">
 					{#each company.description.split('\n\n') as paragraph}
-						<p class="text-sm leading-[1.2] text-dark-grey space-y-[1.5em]">{paragraph}</p>
+						<p class="text-sm leading-[1.4em] text-dark-grey space-y-[1.5em]">{paragraph}</p>
 					{/each}
 				</section>
 			{/if}

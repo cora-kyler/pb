@@ -36,8 +36,12 @@
 	--shadow-subtle-glow-full: 0 0 12px 0 rgba(0,0,0,0.012), 0 0 20px 0 rgba(0,0,0,0.01), 0 0 1px 0 rgba(0,0,0,0.02);
 }
 
+html {
+	overflow-x: hidden;
+}
+
 body {
-	@apply font-mono bg-off-white text-dark-grey leading-relaxed min-h-screen;
+	@apply font-mono bg-off-white text-dark-grey leading-relaxed min-h-screen overflow-x-hidden;
 }
 
 /* Hide scrollbar but keep functionality */

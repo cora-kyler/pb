@@ -1,15 +1,50 @@
 <script lang="ts">
-	import Header from '$lib/components/Header.svelte';
+
 	import TeamCard from '$lib/components/TeamCard.svelte';
+	import TeamModal from '$lib/components/TeamModal.svelte';
+	import CompanyModal from '$lib/components/CompanyModal.svelte';
 	import PreviewWritingCard from '$lib/components/PreviewWritingCard.svelte';
+	import CompanyCard from '$lib/components/CompanyCard.svelte';
+	import { teamMembers, type TeamMember } from '$lib/data/team';
+	import { getAllCompanies, type Company } from '$lib/data/companies';
+	import { goto } from '$app/navigation';
+
+	let selectedMember = $state<TeamMember | null>(null);
+	let selectedCompany = $state<Company | null>(null);
+
+	const featuredCompanies = getAllCompanies().slice(0, 7);
+
+	function openTeamModal(member: TeamMember) {
+		selectedMember = member;
+	}
+
+	function closeTeamModal() {
+		selectedMember = null;
+	}
+
+	function openCompanyModal(company: Company) {
+		selectedCompany = company;
+	}
+
+	function closeCompanyModal() {
+		selectedCompany = null;
+	}
+
+	function handleKeydown(e: KeyboardEvent) {
+		if (e.key === 'Escape') {
+			if (selectedMember) closeTeamModal();
+			if (selectedCompany) closeCompanyModal();
+		}
+	}
 </script>
+
+<svelte:window onkeydown={handleKeydown} />
 
 <svelte:head>
 	<title>Pebblebed Ventures</title>
 </svelte:head>
 
-<div id="home"></div>
-<Header />
+<div id="home" class="scroll-mt-24"></div>
 
 <div class="mx-auto max-w-[900px] px-6 py-10">
 	<section class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
@@ -34,93 +69,41 @@
 	<section>
 		<h2 class="font-sans text-2xl font-semibold text-dark-grey mb-8">Portfolio</h2>
 		<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-		<button class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-subtle-glow-strong overflow-hidden cursor-pointer">
-			<img src="/portfolioimages/augment.svg" alt="Augment" class="w-[95%] h-auto object-contain" />
-		</button>
-		<button class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-subtle-glow-strong overflow-hidden cursor-pointer">
-			<img src="/portfolioimages/orchid.svg" alt="Orchid" class="w-[70%] h-auto object-contain" />
-		</button>
-		<button class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-subtle-glow-strong overflow-hidden cursor-pointer">
-			<img src="/portfolioimages/krea.svg" alt="Krea" class="w-[80%] h-auto object-contain" />
-		</button>
-		<button class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-subtle-glow-strong overflow-hidden cursor-pointer">
-			<img src="/portfolioimages/zeromatter.svg" alt="ZeroMatter" class="w-[90%] h-auto object-contain" />
-		</button>
-		<button class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-subtle-glow-strong overflow-hidden cursor-pointer">
-			<img src="/portfolioimages/openmind.svg" alt="OpenMind" class="w-[90%] h-auto object-contain" />
-		</button>
-		<button class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-subtle-glow-strong overflow-hidden cursor-pointer">
-			<img src="/portfolioimages/lemurian.svg" alt="Lemurian" class="w-[90%] h-auto object-contain" />
-		</button>
-		<button class="aspect-2/1 bg-white border border-dark-grey/15 rounded-lg flex items-center justify-center p-4 md:p-6 transition-shadow hover:shadow-subtle-glow-strong overflow-hidden cursor-pointer">
-			<img src="/portfolioimages/logicalintelligence.png" alt="Logical Intelligence" class="w-[90%] h-auto object-contain" />
-		</button>
-		<button class="aspect-2/1 bg-white rounded-lg border-dashed flex items-center justify-center p-4 md:p-6 cursor-pointer group">
-			<p class="text-xs text-pink w-full text-center group-hover:underline">View more →</p>
-		</button>
+			{#each featuredCompanies as company}
+			<!-- take first 7 companies from companies.ts and display them on the homepage -->
+				<CompanyCard logo={company.logo} name={company.name} onclick={() => openCompanyModal(company)} />
+			{/each}
+			<button class="aspect-2/1 bg-white rounded-lg border-dashed flex items-center justify-center p-4 md:p-6 cursor-pointer group"
+			onclick={() => goto('/portfolio')}
+			>
+				<p class="text-xs text-pink w-full text-center group-hover:underline">View more →</p>
+				
+			</button>
 		</div>
 	</section>
 
 	<hr class="border-t border-dark-grey/20 my-8 md:my-12" />
 
-	<section id="team" class="scroll-mt-20">
+	<section id="team" class="scroll-mt-24">
 		<div class="flex justify-between items-baseline mb-8">
 			<h2 class="font-sans text-2xl font-semibold text-dark-grey">Team</h2>
 			<a href="/hiring" class="font-mono text-xs text-pink hover:underline transition-colors">Join our team →</a>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-			<TeamCard
-				href="/team/pam"
-				name="Pamela Vagata"
-				role="Founding Partner"
-				description="Creator of FBLearner Flow, founding member of OpenAI, led AI at Stripe."
-				image="/teamimages/pam.png"
-				imageAlt="Pam"
-			/>
-			<TeamCard
-				href="/team/keith"
-				name="Keith Adams"
-				role="Founding Partner"
-				description="Founded Facebook AI Research, Chief Architect at Slack."
-				image="/teamimages/keith.png"
-				imageAlt="Keith"
-			/>
-			<TeamCard
-				href="/team/tammie"
-				name="Tammie Siew"
-				role="Founding Partner"
-				description="Founder-turned-investor, formerly at Sequoia."
-				image="/teamimages/tammie.png"
-				imageAlt="Tammie"
-			/>
-			<TeamCard
-				href="/team/nicole"
-				name="Nicole Levin"
-				role="Operations"
-				description="Previously ran ops at AI startups."
-				image="/teamimages/nicole.png"
-				imageAlt="Nicole"
-			/>
-			<TeamCard
-				href="/team/matthew"
-				name="Mathew Vanherreweghe"
-				role="Research Alumni"
-				description="AI Researcher studying alternatives to transformers. Now at a portfolio company."
-				image="/teamimages/matthew.png"
-				imageAlt="Matthew"
-			/>
-			<TeamCard
-				href="/team/jenny"
-				name="Jenny Guanni Qu"
-				role="Research Resident"
-				description="Trained AI to solve math at Caltech, top competitive hacker."
-				image="/teamimages/jenny.png"
-				imageAlt="Jenny"
-			/>
+			{#each teamMembers as member}
+				<TeamCard
+					name={member.name}
+					role={member.role}
+					description={member.description}
+					image={member.image}
+					imageAlt={member.imageAlt}
+					onclick={() => openTeamModal(member)}
+				/>
+			{/each}
 		</div>
 	</section>
 
-	<hr class="border-t border-dark-grey/20 my-8 md:my-12" />
+	<hr class="border-t border-dark-grey/15 my-8 md:my-12" />
 
 	<section>
 		<div class="flex justify-between items-baseline mb-8">
@@ -162,3 +145,13 @@
 		</div>
 	</section>
 </div>
+
+<!-- Team Modal -->
+{#if selectedMember}
+	<TeamModal member={selectedMember} onClose={closeTeamModal} />
+{/if}
+
+<!-- Company Modal -->
+{#if selectedCompany}
+	<CompanyModal company={selectedCompany} onClose={closeCompanyModal} />
+{/if}

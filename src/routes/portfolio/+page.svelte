@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Header from '$lib/components/Header.svelte';
+
 	import CompanyModal from '$lib/components/CompanyModal.svelte';
 	import type { PageData } from './$types';
 	import type { Company } from '$lib/data/companies';
@@ -11,12 +11,10 @@
 	
 	function openModal(company: Company) {
 		selectedCompany = company;
-		document.body.style.overflow = 'hidden';
 	}
 	
 	function closeModal() {
 		selectedCompany = null;
-		document.body.style.overflow = '';
 	}
 	
 	function handleKeydown(e: KeyboardEvent) {
@@ -32,14 +30,15 @@
 	<title>Portfolio | Pebblebed Ventures</title>
 </svelte:head>
 
-<Header />
+
 
 <div class="max-w-[900px] mx-auto px-6 py-10">
 	<section>
-		<h1 class="font-sans text-xl font-medium text-dark-grey mb-2">
-			<span class="text-pink">//</span> portfolio
-		</h1>
-		<p class="font-mono text-xs text-dark-grey mb-10">companies we've invested in.</p>
+		
+		<h2 class="font-sans text-2xl font-semibold text-dark-grey mb-8">
+			 Portfolio
+		</h2>
+		<p class="font-mono text-base text-dark-grey mb-10">Companies we've invested in.</p>
 
 	<div class="flex flex-col divide-y divide-dark-grey/10">
 		{#each companies as company, i}
