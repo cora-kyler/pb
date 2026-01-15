@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { TeamMember } from '$lib/data/team';
+	import ExternalLink from '$lib/components/ExternalLink.svelte';
 	import { fade, scale } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 
@@ -62,14 +63,12 @@
 
 							<div class="flex flex-wrap gap-2">
 								{#each member.links as link}
-									<a 
+									<ExternalLink
 										href={link.url}
-										target="_blank"
-										rel="noopener noreferrer"
 										class="text-xs bg-pink text-white px-1 hover:translate-y-[-2px] transition-all duration-200"
 									>
 										{link.label} <span class="no-emoji">↗</span>
-									</a>
+									</ExternalLink>
 								{/each}
 							</div>
 						</div>
@@ -95,12 +94,12 @@
 			{#if member.bio}
 				<section class="mb-4 space-y-4">
 					{#each member.bio.split('\n\n') as paragraph}
-						<p class="text-sm leading-[1.4em] text-dark-grey">{paragraph}</p>
+						<p class="text-xs sm:text-sm leading-[1.4em] text-dark-grey">{paragraph}</p>
 					{/each}
 				</section>
 			{:else}
 				<section class="mb-4">
-					<p class="text-sm leading-[1.4em] text-dark-grey">{member.description}</p>
+					<p class="text-xs sm:text-sm leading-[1.4em] text-dark-grey">{member.description}</p>
 				</section>
 			{/if}
 

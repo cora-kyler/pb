@@ -1,6 +1,7 @@
 <script lang="ts">
 	import BlogLayout from '$lib/components/BlogLayout.svelte';
 	import BlogChart from '$lib/components/BlogChart.svelte';
+	import ExternalLink from '$lib/components/ExternalLink.svelte';
 </script>
 
 <BlogLayout
@@ -118,14 +119,14 @@
 		<li><strong>13.5% of bugs hide for 5+ years</strong> (these are the dangerous ones)</li>
 		<li>Race conditions hide longest (5.1 years average)</li>
 		<li><strong>VulnBERT catches 92.2%</strong> of bugs on held-out 2024 test set with only 1.2% FPR (98.4% AUC)</li>
-		<li>Dataset: <a href="https://github.com/quguanni/kernel-vuln-data" target="_blank" rel="noopener noreferrer">github.com/quguanni/kernel-vuln-data</a></li>
+		<li>Dataset: <ExternalLink href="https://github.com/quguanni/kernel-vuln-data">github.com/quguanni/kernel-vuln-data</ExternalLink></li>
 	</ul>
 
 	<div class="bg-light-grey/40 border border-dark-grey/10 rounded-lg p-3 md:p-4 mt-10 flex gap-4 items-start leading-[1.4em]">
 		<div class="flex-1">
 			<p class="text-xs text-dark-grey/80 leading-relaxed">
 				If you're working on kernel security, vulnerability detection, or ML for code analysis, I'd love to talk:
-				<a href="mailto:jenny@pebblebed.com" class="text-pink hover:underline" target="_blank" rel="noopener noreferrer">jenny@pebblebed.com</a>
+				<ExternalLink href="mailto:jenny@pebblebed.com" class="text-pink hover:underline">jenny@pebblebed.com</ExternalLink>
 			</p>
 		</div>
 		<img src="/marker.svg" alt="" class="w-10 h-10 shrink-0" />

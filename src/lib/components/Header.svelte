@@ -11,7 +11,7 @@
 			<span class="font-sans text-[22px] font-semibold tracking-tight text-dark-grey">pebblebed</span>
 		</a>
 		<nav class="flex gap-0 overflow-visible">
-			<a href="/portfolio" class="font-sans text-sm font-medium text-dark-grey no-underline hover:opacity-70 transition-opacity relative px-4 sm:px-8 py-4 overflow-visible">
+			<a href="/portfolio" class="font-sans text-sm font-medium text-dark-grey no-underline hover:opacity-70 transition-opacity relative px-2 sm:px-8 py-3 sm:py-4 overflow-visible">
 				portfolio
 				{#if page.url.pathname === '/portfolio'}
 				<img
@@ -21,7 +21,7 @@
 			/>
 				{/if}
 			</a>
-			<a href="/#team" class="font-sans text-sm font-medium text-dark-grey no-underline hover:opacity-70 transition-opacity relative px-4 sm:px-8 py-4">
+			<a href="/#team" class="font-sans text-sm font-medium text-dark-grey no-underline hover:opacity-70 transition-opacity relative px-2 sm:px-8 py-3 sm:py-4">
 				team
 				{#if page.url.pathname === '/' && page.url.hash === '#team'}
 				<img
@@ -31,7 +31,7 @@
 			/>
 				{/if}
 			</a>
-			<a href="/writing" class="font-sans text-sm font-medium text-dark-grey no-underline hover:opacity-70 transition-opacity relative inline-block px-4 sm:px-8 py-4 overflow-visible">
+			<a href="/writing" class="font-sans text-sm font-medium text-dark-grey no-underline hover:opacity-70 transition-opacity relative inline-block px-2 sm:px-8 py-3 sm:py-4 overflow-visible">
 				<span class="relative z-10">writing</span>
 				{#if page.url.pathname === '/writing'}
 					<img
