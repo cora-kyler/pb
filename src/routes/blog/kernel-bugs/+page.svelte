@@ -8,6 +8,7 @@
 	date="January 7, 2026"
 	author="Jenny Guanni Qu"
 	email="jenny@pebblebed.com"
+	shoutout="If you're working on kernel security, vulnerability detection, or ML for code analysis, I'd love to talk: jenny@pebblebed.com"
 >
 	<p>There are bugs in your kernel right now that won't be found for years. I know because I analyzed 125,183 of them, every bug with a traceable <span class="tag">Fixes:</span> tag in the Linux kernel's 20-year git history.</p>
 
@@ -121,5 +122,4 @@
 		<li>Dataset: <a href="https://github.com/quguanni/kernel-vuln-data" target="_blank" rel="noopener noreferrer">github.com/quguanni/kernel-vuln-data</a></li>
 	</ul>
 
-	<p><em>If you're working on kernel security, vulnerability detection, or ML for code analysis, I'd love to talk: jenny@pebblebed.com</em></p>
 </BlogLayout>

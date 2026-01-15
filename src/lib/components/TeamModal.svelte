@@ -35,11 +35,11 @@
 		onclick={(e) => e.stopPropagation()}
 	>
 		<!-- Fixed Header -->
-		<div class="shrink-0 p-8 pb-0">
+		<div class="shrink-0 p-4 md:p-8 pb-0">
 			<!-- Close button -->
 			<button 
 				onclick={handleCloseClick}
-				class="absolute top-6 right-6 text-dark-grey/40 hover:text-dark-grey transition-colors text-xl z-10"
+				class="absolute top-3 right-3 md:top-4 md:right-4 text-dark-grey/40 hover:text-dark-grey transition-colors text-xl z-10"
 				aria-label="Close modal"
 			>
 				×
@@ -67,7 +67,7 @@
 										href={link.url}
 										target="_blank"
 										rel="noopener noreferrer"
-										class="text-xs bg-pink text-white px-2 py-1 hover:translate-y-[-2px] transition-all duration-200"
+										class="text-xs bg-pink text-white px-1 hover:translate-y-[-2px] transition-all duration-200"
 									>
 										{link.label} ↗
 									</a>
@@ -87,12 +87,12 @@
 				</header>
 
 			<!-- Profile Image -->
-			<img src={member.image} alt={member.imageAlt} class="w-48 aspect-square object-cover bg-white border border-dark-grey/15 shadow-invert shrink-0 rounded-sm mr-4" />
+			<img src={member.image} alt={member.imageAlt} class="w-28 md:w-48 aspect-square object-cover bg-white border border-dark-grey/15 shadow-invert shrink-0 rounded-sm mr-6" />
 			</div>
 		</div>
 
 		<!-- Scrollable Content - Bio -->
-		<div class="flex-1 overflow-y-auto px-8 pt-4 pb-8 border-t border-dark-grey/10 scrollbar-hide">
+		<div class="flex-1 overflow-y-auto px-4 md:px-8 pt-4 pb-8 border-t border-dark-grey/10 scrollbar-hide">
 			{#if member.bio}
 				<section class="mb-8 space-y-4">
 					{#each member.bio.split('\n\n') as paragraph}

@@ -1,5 +1,5 @@
 <script lang="ts">
-
+	import { afterNavigate, goto } from '$app/navigation';
 	import TeamCard from '$lib/components/TeamCard.svelte';
 	import TeamModal from '$lib/components/TeamModal.svelte';
 	import CompanyModal from '$lib/components/CompanyModal.svelte';
@@ -7,10 +7,20 @@
 	import CompanyCard from '$lib/components/CompanyCard.svelte';
 	import { teamMembers, type TeamMember } from '$lib/data/team';
 	import { getAllCompanies, type Company } from '$lib/data/companies';
-	import { goto } from '$app/navigation';
 
 	let selectedMember = $state<TeamMember | null>(null);
 	let selectedCompany = $state<Company | null>(null);
+
+	afterNavigate(({ to }) => {
+		selectedMember = null;
+		selectedCompany = null;
+		if (to?.url.hash) {
+			setTimeout(() => {
+				const el = document.querySelector(to.url.hash);
+				if (el) window.scrollTo({ top: el.offsetTop - 96, behavior: 'smooth' });
+			}, 50);
+		}
+	});
 
 	const featuredCompanies = getAllCompanies().slice(0, 7);
 
@@ -56,11 +66,11 @@
 		<div class="w-full md:w-[280px] shrink-0">
 			<div class="flex items-center gap-4 md:block">
 				<img src="/pebbles1.png" alt="Pebblebed illustration" class="w-[45%] md:w-full h-auto shrink-0" />
-				<p class="text-[10px] text-dark-grey/50 leading-relaxed md:hidden">A pebblebed reactor can't melt down. This is a guaranteed made by physics, not intervention. We named our firm after this principle.</p>
+				<p class="text-[10px] text-dark-grey/50 leading-relaxed md:hidden">A pebblebed reactor can't melt down. This is a guarantee made by physics, not intervention. We named our firm after this principle.</p>
 			</div>
 			<div class="hidden md:flex items-start gap-2 mt-3">
 				<img src="/arrow.svg" alt="" class="w-auto h-12 shrink-0 -mt-12 rotate-15" />
-				<p class="text-[10px] text-dark-grey/50 leading-relaxed">A pebblebed reactor can't melt down.<br />This is a guaranteed made by physics, not intervention. We named our firm after this principle.</p>
+				<p class="text-[10px] text-dark-grey/50 leading-relaxed">A pebblebed reactor can't melt down.<br />This is a guarantee made by physics, not intervention. We named our firm after this principle.</p>
 			</div>
 		</div>
 	</section>
