@@ -39,3 +39,22 @@
 body {
 	@apply font-mono bg-off-white text-dark-grey leading-relaxed min-h-screen;
 }
+
+.highlight-pink {
+	background-color: rgba(226, 35, 220, 0.08);
+	padding: 0 4px;
+	border-radius: 2px;
+}
+
+.picture-frame {
+	display: block;
+	padding: 6px;
+	border: 1px solid #E223DC;
+	border-radius: 12px;
+	background-color: #FFFFFF;
+}
+
+.masonry-item {
+	break-inside: avoid;
+	page-break-inside: avoid;
+}
