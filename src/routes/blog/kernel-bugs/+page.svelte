@@ -9,7 +9,7 @@
 	author="Jenny Guanni Qu"
 	email="jenny@pebblebed.com"
 >
-	<p>There are bugs in your kernel right now that won't be found for years. I know because I analyzed 125,183 of them, every bug with a traceable <code>Fixes:</code> tag in the Linux kernel's 20-year git history.</p>
+	<p>There are bugs in your kernel right now that won't be found for years. I know because I analyzed 125,183 of them, every bug with a traceable <span class="tag">Fixes:</span> tag in the Linux kernel's 20-year git history.</p>
 
 	<p>The average kernel bug lives <span class="mono-semibold">2.1 years</span> before discovery. But some subsystems are far worse: CAN bus drivers average <span class="mono-semibold">4.2 years</span>, SCTP networking <span class="mono-semibold">4.0 years.</span> The longest-lived bug in my dataset, a buffer overflow in ethtool, sat in the kernel for <span class="mono-semibold">20.7 years.</span> The one which I'll dissect in detail is refcount leak in netfilter, and it lasted <span class="mono-semibold">19 years.</span></p>
 
@@ -18,7 +18,7 @@
 	<BlogChart
 		title="Key findings at a glance"
 		rows={[
-			{ cells: ['125,183', 'Bug-fix pairs with traceable <code>Fixes:</code> tags'], bold: [0] },
+			{ cells: ['125,183', 'Bug-fix pairs with traceable <span class="tag">Fixes:</span> tags'], bold: [0] },
 			{ cells: ['123,696', 'Valid records after filtering (0 &lt; lifetime &lt; 27 years)'], bold: [0] },
 			{ cells: ['2.1 years', 'Average time a bug hides before discovery'], bold: [0] },
 			{ cells: ['20.7 years', 'Longest-lived bug (ethtool buffer overflow)'], bold: [0] },
@@ -28,7 +28,7 @@
 	/>
 
 	<h2 class="blog-h2">The initial discovery</h2>
-	<p>I started by mining the most recent 10,000 commits with <code>Fixes:</code> tags from the Linux kernel. After filtering out invalid references (commits that pointed to hashes outside the repo, malformed tags, or merge commits), I had <strong>9,876 valid vulnerability records</strong>. For the lifetime analysis, I excluded 27 same-day fixes (bugs introduced and fixed within hours), leaving <strong>9,849 bugs</strong> with meaningful lifetimes.</p>
+	<p>I started by mining the most recent 10,000 commits with <span class="tag">Fixes:</span> tags from the Linux kernel. After filtering out invalid references (commits that pointed to hashes outside the repo, malformed tags, or merge commits), I had <strong>9,876 valid vulnerability records</strong>. For the lifetime analysis, I excluded 27 same-day fixes (bugs introduced and fixed within hours), leaving <strong>9,849 bugs</strong> with meaningful lifetimes.</p>
 
 	<p>The results were striking:</p>
 
@@ -49,7 +49,7 @@
 	<p>But something nagged at me: my dataset only contained fixes from 2025. Was I seeing the full picture, or just the tip of the iceberg?</p>
 
 	<h2 class="blog-h2">Going deeper: Mining the full history</h2>
-	<p>I rewrote my miner to capture <strong>every</strong> <code>Fixes:</code> tag since Linux moved to git in 2005. Six hours later, I had 125,183 vulnerability records which was 12x larger than my initial dataset.</p>
+	<p>I rewrote my miner to capture <strong>every</strong> <span class="tag">Fixes:</span> tag since Linux moved to git in 2005. Six hours later, I had 125,183 vulnerability records which was 12x larger than my initial dataset.</p>
 
 	<p>The numbers changed significantly:</p>
 
