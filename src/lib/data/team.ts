@@ -52,7 +52,7 @@ export const teamMembers: TeamMember[] = [
 		name: "Nicole Levin",
 		role: "Operations",
 		description: "Previously ran ops at AI startups.",
-        bio: "Thinks in systems, stories, and social graphs to create bridges between people and ideas. Previously ran ops at AI startups and was a broadcast journalist. Now stewards the Pebbleverse.",
+        bio: "Nicole thinks in systems, stories, and social graphs to create bridges between people and ideas. She previously ran ops at AI startups and was a broadcast journalist. Now, she stewards the Pebbleverse.",
 		image: "/teamimages/nicole.png",
 		imageAlt: "Nicole Levin",
         links: [
@@ -65,7 +65,7 @@ export const teamMembers: TeamMember[] = [
 		name: "Mathew Vanherreweghe",
 		role: "Research Alumni",
 		description: "AI Researcher studying alternatives to transformers. Now at a portfolio company.",
-        bio: "AI Researcher studying alternatives to transformers. Believes AI is like an alien race and we need to understand these creatures.",
+        bio: "Mathew is an AI Researcher studying alternatives to transformers. He believes AI is like an alien race and we need to understand these creatures.",
 		image: "/teamimages/matthew.png",
 		imageAlt: "Mathew Vanherreweghe",
         links: [

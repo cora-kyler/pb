@@ -31,18 +31,18 @@
 		onclick={(e) => e.stopPropagation()}
 	>
 		<!-- Fixed Header -->
-		<div class="shrink-0 p-8 pb-0">
+		<div class="shrink-0 p-4 md:p-8 pb-0">
 			<!-- Close button -->
 			<button 
 				onclick={onClose}
-				class="absolute top-4 right-4 text-dark-grey/40 hover:text-dark-grey transition-colors text-xl z-10"
+				class="absolute top-3 right-3 md:top-4 md:right-4 text-dark-grey/40 hover:text-dark-grey transition-colors text-xl z-10"
 				aria-label="Close modal"
 			>
 				×
 			</button>
 			
 			<!-- Header with Logo -->
-			<div class="flex justify-between items-start mb-6">
+			<div class="flex justify-between items-start mb-4">
 				<header>
 					<h2 class="font-sans text-xl font-medium text-dark-grey mb-2">
 						{company.name}
@@ -64,18 +64,18 @@
 
 				<!-- Logo -->
 				{#if company.logo}
-					<img src={company.logo} alt="{company.name} logo" class="h-auto w-32 object-contain mt-1" />
+					<img src={company.logo} alt="{company.name} logo" class="h-auto w-24 md:w-32 object-contain mt-1 mr-6" />
 				{/if}
 			</div>
 		</div>
 
 		<!-- Scrollable Content -->
-		<div class="flex-1 overflow-y-auto px-8 pt-4 pb-8 border-t border-dark-grey/10 scrollbar-hide">
+		<div class="flex-1 overflow-y-auto px-4 md:px-8 pt-4 pb-8 border-t border-dark-grey/10 scrollbar-hide">
 			<!-- Founders -->
 			{#if company.founders.length > 0}
-				<section class="mb-8">
-					<h3 class="font-mono text-[10px] text-dark-grey/50 mb-2">// {company.founders.length === 1 ? 'founder' : 'founders'}</h3>
-					<div class="flex flex-wrap gap-x-3">
+				<section class="mb-4">
+					<h3 class="font-mono text-xs text-dark-grey/50 mb-2">// {company.founders.length === 1 ? 'founder' : 'founders'}</h3>
+					<div class="flex flex-wrap gap-x-3 gap-y-2">
 						{#each company.founders as founder}
 							{#if founder.link}
 								<a 
@@ -96,7 +96,7 @@
 
 			<!-- Description -->
 			{#if company.description}
-				<section class="mb-8 space-y-4">
+				<section class="mb-4 space-y-4">
 					{#each company.description.split('\n\n') as paragraph}
 						<p class="text-sm leading-[1.4em] text-dark-grey space-y-[1.5em]">{paragraph}</p>
 					{/each}
@@ -105,8 +105,8 @@
 
 			<!-- News -->
 			{#if company.news && company.news.length > 0}
-				<section class="mb-8">
-					<h3 class="font-mono text-[10px] text-dark-grey/50 mb-3">// in the news</h3>
+				<section class="mb-4">
+					<h3 class="font-mono text-xs text-dark-grey/50 mb-3">// in the news</h3>
 					<div class="space-y-3 font-sans">
 						{#each company.news as item}
 							<a 

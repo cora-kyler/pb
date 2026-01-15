@@ -17,7 +17,7 @@
 			<h2 class="font-sans text-base font-medium text-dark-grey">{title}</h2>
 			<span class="text-[11px] text-dark-grey/70 shrink-0">{date}</span>
 		</div>
-		<p class="text-xs text-dark-grey mb-3">{author} <span class="text-dark-grey/50">({email})</span></p>
+		<p class="text-xs text-dark-grey mb-3">{author} <span class="text-dark-grey/70">({email})</span></p>
 		<p class="text-xs leading-[1.7] text-dark-grey mb-3">{description}</p>
 		<span class="text-xs text-pink no-underline">Read more →</span>
 	</article>
