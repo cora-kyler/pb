@@ -46,7 +46,7 @@
 			</button>
 			
 			<!-- Header with Image -->
-			<div class="flex justify-between items-start mb-6">
+			<div class="flex justify-between items-start mb-6 md:mb-2">
 				<header class="flex-1">
 					<!-- Name -->
 					<h2 class="font-sans text-xl font-medium text-dark-grey mb-2">
@@ -92,15 +92,15 @@
 		</div>
 
 		<!-- Scrollable Content - Bio -->
-		<div class="flex-1 overflow-y-auto px-4 md:px-8 pt-4 pb-8 border-t border-dark-grey/10 scrollbar-hide">
+		<div class="flex-1 overflow-y-auto px-4 md:px-8 pt-4 pb-4 border-t border-dark-grey/10 scrollbar-hide">
 			{#if member.bio}
-				<section class="mb-8 space-y-4">
+				<section class="mb-4 space-y-4">
 					{#each member.bio.split('\n\n') as paragraph}
 						<p class="text-sm leading-[1.4em] text-dark-grey">{paragraph}</p>
 					{/each}
 				</section>
 			{:else}
-				<section class="mb-8">
+				<section class="mb-4">
 					<p class="text-sm leading-[1.4em] text-dark-grey">{member.description}</p>
 				</section>
 			{/if}

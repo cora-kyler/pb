@@ -42,7 +42,7 @@
 			</button>
 			
 			<!-- Header with Logo -->
-			<div class="flex justify-between items-start mb-6">
+			<div class="flex justify-between items-start mb-4">
 				<header>
 					<h2 class="font-sans text-xl font-medium text-dark-grey mb-2">
 						{company.name}
@@ -73,7 +73,7 @@
 		<div class="flex-1 overflow-y-auto px-4 md:px-8 pt-4 pb-8 border-t border-dark-grey/10 scrollbar-hide">
 			<!-- Founders -->
 			{#if company.founders.length > 0}
-				<section class="mb-8">
+				<section class="mb-4">
 					<h3 class="font-mono text-xs text-dark-grey/50 mb-2">// {company.founders.length === 1 ? 'founder' : 'founders'}</h3>
 					<div class="flex flex-wrap gap-x-3 gap-y-2">
 						{#each company.founders as founder}
@@ -96,7 +96,7 @@
 
 			<!-- Description -->
 			{#if company.description}
-				<section class="mb-8 space-y-4">
+				<section class="mb-4 space-y-4">
 					{#each company.description.split('\n\n') as paragraph}
 						<p class="text-sm leading-[1.4em] text-dark-grey space-y-[1.5em]">{paragraph}</p>
 					{/each}
@@ -105,7 +105,7 @@
 
 			<!-- News -->
 			{#if company.news && company.news.length > 0}
-				<section class="mb-8">
+				<section class="mb-4">
 					<h3 class="font-mono text-xs text-dark-grey/50 mb-3">// in the news</h3>
 					<div class="space-y-3 font-sans">
 						{#each company.news as item}
