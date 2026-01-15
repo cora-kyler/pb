@@ -1,5 +1,5 @@
 <script lang="ts">
-
+	import ExternalLink from '$lib/components/ExternalLink.svelte';
 </script>
 
 <svelte:head>
@@ -30,7 +30,7 @@
 					<span class="text-pink">//</span> how to apply
 				</h2>
 				<div class="text-xs md:text-sm text-dark-grey/80 leading-relaxed space-y-3">
-					<p>If this sounds like you, send us a note at <a href="mailto:jobs@pebblebed.com" class="text-pink hover:underline" target="_blank" rel="noopener noreferrer">jobs@pebblebed.com</a> with:</p>
+					<p>If this sounds like you, send us a note at <ExternalLink href="mailto:jobs@pebblebed.com" class="text-pink hover:underline">jobs@pebblebed.com</ExternalLink> with:</p>
 					<ul class="space-y-2 list-disc list-inside ml-1 leading-[1.6em]">
 						<li>A 150–200 word reflection on one AI startup you admire (and why).</li>
 						<li>Links you'd like to share (LinkedIn, GitHub, Twitter, personal site — whatever best shows your work/curiosity).</li>

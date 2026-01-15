@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Company } from '$lib/data/companies';
+	import ExternalLink from '$lib/components/ExternalLink.svelte';
 	import { fade, scale } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 
@@ -50,14 +51,12 @@
 						<p class="font-mono text-sm text-dark-grey/70 mb-2">{company.tagline}</p>
 					{/if}
 					{#if company.website}
-						<a 
-							href={company.website} 
-							target="_blank" 
-							rel="noopener noreferrer"
+						<ExternalLink
+							href={company.website}
 							class="text-base text-pink hover:underline transition-all duration-200 font-sans"
 						>
 							{company.website.replace('https://', '')} <span class="no-emoji">↗</span>
-						</a>
+						</ExternalLink>
 					{/if}
 				</header>
 
@@ -77,14 +76,12 @@
 					<div class="flex flex-wrap gap-x-3 gap-y-2">
 						{#each company.founders as founder}
 							{#if founder.link}
-								<a 
-									href={founder.link} 
-									target="_blank" 
-									rel="noopener noreferrer"
+								<ExternalLink
+									href={founder.link}
 									class="text-xs bg-pink text-white px-1 hover:translate-y-[-2px] transition-all duration-200"
 								>
 									{founder.name} <span class="no-emoji">↗</span>
-								</a>
+								</ExternalLink>
 							{:else}
 								<span class=" text-pink text-xs bg-white border border-pink px-1">{founder.name}</span>
 							{/if}
@@ -97,7 +94,7 @@
 			{#if company.description}
 				<section class="mb-4 space-y-4">
 					{#each company.description.split('\n\n') as paragraph}
-						<p class="text-sm leading-[1.4em] text-dark-grey space-y-[1.5em]">{paragraph}</p>
+						<p class="text-xs sm:text-sm leading-[1.4em] text-dark-grey space-y-[1.5em]">{paragraph}</p>
 					{/each}
 				</section>
 			{/if}
@@ -108,15 +105,13 @@
 					<h3 class="font-mono text-xs text-dark-grey/50 mb-3">// in the news</h3>
 					<div class="space-y-3 font-sans">
 						{#each company.news as item}
-							<a 
+							<ExternalLink
 								href={item.url}
-								target="_blank"
-								rel="noopener noreferrer"
 								class="block border border-dark-grey/10 rounded-md p-4 bg-white shadow-subtle-glow hover:shadow-subtle-glow-strong hover:border-pink transition-all"
 							>
 								<p class="text-sm text-dark-grey mb-1">{item.title}</p>
 								<p class="text-xs text-dark-grey/50">{item.source} · {item.date}</p>
-							</a>
+							</ExternalLink>
 						{/each}
 					</div>
 				</section>
